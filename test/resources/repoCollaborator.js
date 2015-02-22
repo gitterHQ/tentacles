@@ -10,7 +10,7 @@ describe('repoCollaborator', function() {
     });
 
     ghClient.repo.listForAuthUser()
-      .spread(function(repos) {
+      .then(function(repos) {
         var adminTeams = repos.filter(function(repo) {
           return repo.permissions.admin && !repo.private;
         });
@@ -18,7 +18,7 @@ describe('repoCollaborator', function() {
         publicRepoWithAdmin = adminTeams[0].full_name;
         return ghClient.user.getAuthUser();
       })
-      .spread(function(user) {
+      .then(function(user) {
         username = user.login;
       })
       .nodeify(done);
@@ -26,7 +26,7 @@ describe('repoCollaborator', function() {
 
   it('list', function(done) {
     ghClient.repoCollaborator.list(publicRepoWithAdmin)
-      .spread(function(collaborators) {
+      .then(function(collaborators) {
         assert(Array.isArray(collaborators));
         assert(collaborators.length > 0);
       })
@@ -35,7 +35,7 @@ describe('repoCollaborator', function() {
 
   it('checkForUser positive', function(done) {
     ghClient.repoCollaborator.checkForUser(publicRepoWithAdmin, username)
-      .spread(function(isCollaborator) {
+      .then(function(isCollaborator) {
         assert(isCollaborator);
       })
       .nodeify(done);
@@ -43,7 +43,7 @@ describe('repoCollaborator', function() {
 
   it('checkForUser negative', function(done) {
     ghClient.repoCollaborator.checkForUser(publicRepoWithAdmin, 'tj')
-      .spread(function(isCollaborator) {
+      .then(function(isCollaborator) {
         assert(!isCollaborator);
       })
       .nodeify(done);

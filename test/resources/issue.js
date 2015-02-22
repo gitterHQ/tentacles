@@ -10,7 +10,7 @@ describe('issue', function() {
     });
 
     ghClient.org.listForAuthUser()
-      .spread(function(orgs) {
+      .then(function(orgs) {
         orgName = orgs[0].login;
       })
       .nodeify(done);
@@ -18,7 +18,7 @@ describe('issue', function() {
 
   it('listAllVisibleForAuthUser', function(done) {
     ghClient.issue.listAllVisibleForAuthUser()
-      .spread(function(issues) {
+      .then(function(issues) {
         assert(Array.isArray(issues));
       })
       .nodeify(done);
@@ -26,7 +26,7 @@ describe('issue', function() {
 
   it('listAllOwnerAndMemberForAuthUser', function(done) {
     ghClient.issue.listAllOwnerAndMemberForAuthUser()
-      .spread(function(issues) {
+      .then(function(issues) {
         assert(Array.isArray(issues));
       })
       .nodeify(done);
@@ -34,7 +34,7 @@ describe('issue', function() {
 
   it('listForOrgForAuthUser', function(done) {
     ghClient.issue.listForOrgForAuthUser(orgName)
-      .spread(function(issues) {
+      .then(function(issues) {
         assert(Array.isArray(issues));
       })
       .nodeify(done);
@@ -42,7 +42,7 @@ describe('issue', function() {
 
   it('listForRepo', function(done) {
     ghClient.issue.listForRepo('gitterHQ/gitter')
-      .spread(function(issues) {
+      .then(function(issues) {
         assert(Array.isArray(issues));
         assert(issues.length > 0);
       })
@@ -51,7 +51,7 @@ describe('issue', function() {
 
   it('get', function(done) {
     ghClient.issue.get('gitterHQ/gitter', 1)
-      .spread(function(issue) {
+      .then(function(issue) {
         assert(issue);
       })
       .nodeify(done);
@@ -59,7 +59,7 @@ describe('issue', function() {
 
   it('get does not exist', function(done) {
     ghClient.issue.get('gitterHQ/gitter21312312312', 1)
-      .spread(function(issue) {
+      .then(function(issue) {
         assert(!issue);
       })
       .nodeify(done);

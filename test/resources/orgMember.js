@@ -12,7 +12,7 @@ describe('orgMember', function() {
 
     it('listMembers', function(done) {
       ghClient.orgMember.listMembers('gitterHQ')
-        .spread(function(members) {
+        .then(function(members) {
           assert(Array.isArray(members));
           assert(members.length > 0);
         })
@@ -21,7 +21,7 @@ describe('orgMember', function() {
 
     it('checkMembershipForUser success', function(done) {
       ghClient.orgMember.checkMembershipForUser('gitterHQ', 'suprememoocow')
-        .spread(function(result) {
+        .then(function(result) {
           assert(result);
         })
         .nodeify(done);
@@ -29,7 +29,7 @@ describe('orgMember', function() {
 
     it('checkMembershipForUser fail', function(done) {
       ghClient.orgMember.checkMembershipForUser('gitterHQ', 'tj')
-        .spread(function(result) {
+        .then(function(result) {
           assert(!result);
         })
         .nodeify(done);
@@ -37,7 +37,7 @@ describe('orgMember', function() {
 
     it('listPublicMembers', function(done) {
       ghClient.orgMember.listPublicMembers('gitterHQ')
-        .spread(function(members) {
+        .then(function(members) {
           assert(Array.isArray(members));
           assert(members.length > 0);
         })
@@ -46,7 +46,7 @@ describe('orgMember', function() {
 
     it('checkPublicMembership', function(done) {
       ghClient.orgMember.checkPublicMembership('gitterHQ', 'tj')
-        .spread(function(result) {
+        .then(function(result) {
           assert(!result);
         })
         .nodeify(done);
@@ -68,7 +68,7 @@ describe('orgMember', function() {
 
     it('listMembers', function(done) {
       ghClient.orgMember.listMembers('gitterHQ')
-        .spread(function(members) {
+        .then(function(members) {
           assert(Array.isArray(members));
           assert(members.length > 0);
         })
@@ -77,7 +77,7 @@ describe('orgMember', function() {
 
     it('checkMembershipForUser success', function(done) {
       ghClient.orgMember.checkMembershipForUser('gitterHQ', 'suprememoocow')
-        .spread(function(result) {
+        .then(function(result) {
           assert(result);
         })
         .nodeify(done);
@@ -85,7 +85,7 @@ describe('orgMember', function() {
 
     it('checkMembershipForUser fail', function(done) {
       ghClient.orgMember.checkMembershipForUser('gitterHQ', 'tj')
-        .spread(function(result) {
+        .then(function(result) {
           assert(!result);
         })
         .nodeify(done);
@@ -93,7 +93,7 @@ describe('orgMember', function() {
 
     it('listPublicMembers', function(done) {
       ghClient.orgMember.listPublicMembers('gitterHQ')
-        .spread(function(members) {
+        .then(function(members) {
           assert(Array.isArray(members));
           assert(members.length > 0);
         })
@@ -102,7 +102,7 @@ describe('orgMember', function() {
 
     it('checkPublicMembership', function(done) {
       ghClient.orgMember.checkPublicMembership('gitterHQ', 'tj')
-        .spread(function(result) {
+        .then(function(result) {
           assert(!result);
         })
         .nodeify(done);
@@ -110,7 +110,7 @@ describe('orgMember', function() {
 
     it('getMembershipForUser', function(done) {
       ghClient.orgMember.getMembershipForUser('gittertestbotorg', 'gittertestbot')
-        .spread(function(membership) {
+        .then(function(membership) {
           assert(membership);
           assert(membership.organization);
           assert(membership.user);
@@ -120,7 +120,7 @@ describe('orgMember', function() {
 
     it('getMembershipForUser non-existant', function(done) {
       ghClient.orgMember.getMembershipForUser('gittertestbotorg', 'asdasdasdasdasdasdasdasd')
-        .spread(function(membership) {
+        .then(function(membership) {
           assert(!membership);
         })
         .nodeify(done);
@@ -128,7 +128,7 @@ describe('orgMember', function() {
 
     it('getMembershipForUser non-member', function(done) {
       ghClient.orgMember.getMembershipForUser('gittertestbotorg', 'tj')
-        .spread(function(membership) {
+        .then(function(membership) {
           assert(!membership);
         })
         .nodeify(done);
@@ -136,7 +136,7 @@ describe('orgMember', function() {
 
     it('listMembershipsForAuthUser non-member', function(done) {
       ghClient.orgMember.listMembershipsForAuthUser('gittertestbotorg')
-        .spread(function(memberships) {
+        .then(function(memberships) {
           assert(Array.isArray(memberships));
           assert(memberships.length > 0);
         })
@@ -145,7 +145,7 @@ describe('orgMember', function() {
 
     it('getMembershipForAuthUser success', function(done) {
       ghClient.orgMember.getMembershipForAuthUser('gittertestbotorg')
-        .spread(function(membership) {
+        .then(function(membership) {
           assert(membership);
           assert(membership.organization);
           assert(membership.user);
@@ -155,7 +155,7 @@ describe('orgMember', function() {
 
     it('getMembershipForAuthUser non-member', function(done) {
       ghClient.orgMember.getMembershipForAuthUser('joyent')
-        .spread(function(membership) {
+        .then(function(membership) {
           assert(!membership);
         })
         .nodeify(done);
@@ -163,7 +163,7 @@ describe('orgMember', function() {
 
     it('getMembershipForAuthUser non-org', function(done) {
       ghClient.orgMember.getMembershipForAuthUser('asldkjasdlkasjdsakljdslsak')
-        .spread(function(membership) {
+        .then(function(membership) {
           assert(!membership);
         })
         .nodeify(done);

@@ -10,7 +10,7 @@ describe('user', function() {
 
   it('should find users', function(done) {
     ghClient.user.get('suprememoocow')
-      .spread(function(user) {
+      .then(function(user) {
         assert.strictEqual('suprememoocow', user.login);
       })
       .nodeify(done);
@@ -18,7 +18,7 @@ describe('user', function() {
 
   it('should return null for non-existent users', function(done) {
     ghClient.user.get('adsdsaqwheqwoieoqiweu')
-      .spread(function(user) {
+      .then(function(user) {
         assert(!user);
       })
       .nodeify(done);
@@ -26,7 +26,7 @@ describe('user', function() {
 
   it('should get an authenticated user', function(done) {
     ghClient.user.getAuthUser()
-      .spread(function(user) {
+      .then(function(user) {
         assert(user.login);
       })
       .nodeify(done);

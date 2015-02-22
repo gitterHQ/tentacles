@@ -12,7 +12,7 @@ describe('pullRequest', function() {
 
   it('listForRepo', function(done) {
     ghClient.pullRequest.listForRepo('gitterHQ/services', { query: { state: 'all' } })
-      .spread(function(pulls) {
+      .then(function(pulls) {
         assert(Array.isArray(pulls));
         assert(pulls.length > 0);
       })
@@ -21,7 +21,7 @@ describe('pullRequest', function() {
 
   it('listForRepo closed', function(done) {
     ghClient.pullRequest.listForRepo('gitterHQ/services', { query: { state: 'open' } })
-      .spread(function(pulls) {
+      .then(function(pulls) {
         assert(Array.isArray(pulls));
         pulls.forEach(function(pull) {
           assert.strictEqual(pull.state, 'open');
@@ -32,7 +32,7 @@ describe('pullRequest', function() {
 
   it('get', function(done) {
     ghClient.pullRequest.get('gitterHQ/services', 3)
-      .spread(function(pull) {
+      .then(function(pull) {
         assert(pull);
       })
       .nodeify(done);
@@ -40,7 +40,7 @@ describe('pullRequest', function() {
 
   it('get non-existant', function(done) {
     ghClient.pullRequest.get('gitterHQ/services231', 3)
-      .spread(function(pull) {
+      .then(function(pull) {
         assert(!pull);
       })
       .nodeify(done);
@@ -48,7 +48,7 @@ describe('pullRequest', function() {
 
   it('listCommits', function(done) {
     ghClient.pullRequest.listCommits('gitterHQ/services', 3)
-      .spread(function(commits) {
+      .then(function(commits) {
         assert(Array.isArray(commits));
         assert(commits.length > 0);
       })
@@ -57,7 +57,7 @@ describe('pullRequest', function() {
 
   it('listFiles', function(done) {
     ghClient.pullRequest.listFiles('gitterHQ/services', 3)
-      .spread(function(files) {
+      .then(function(files) {
         assert(Array.isArray(files));
         assert(files.length > 0);
       })
@@ -66,7 +66,7 @@ describe('pullRequest', function() {
 
   it('checkMerged', function(done) {
     ghClient.pullRequest.checkMerged('gitterHQ/services', 3)
-      .spread(function(isMerged) {
+      .then(function(isMerged) {
         assert(isMerged);
       })
       .nodeify(done);

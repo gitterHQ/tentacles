@@ -10,7 +10,7 @@ describe('userEmail', function() {
 
   it('listForAuthUser', function(done) {
     ghClient.userEmail.listForAuthUser()
-      .spread(function(emails) {
+      .then(function(emails) {
         assert(Array.isArray(emails));
         assert(emails.length > 0);
       })

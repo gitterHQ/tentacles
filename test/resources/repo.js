@@ -21,7 +21,7 @@ describe('repo', function() {
       });
 
       ghClient.repo.listForAuthUser()
-        .spread(function(repos) {
+        .then(function(repos) {
           var adminTeams = repos.filter(function(repo) {
             return repo.permissions.admin && !repo.private;
           });
@@ -34,7 +34,7 @@ describe('repo', function() {
 
     it('listAuthUser', function(done) {
       ghClient.repo.listForAuthUser()
-        .spread(function(repos) {
+        .then(function(repos) {
           assert(Array.isArray(repos));
           assert(repos.length > 0);
         })
@@ -43,7 +43,7 @@ describe('repo', function() {
 
     it('listAuthUser with parameters', function(done) {
       ghClient.repo.listForAuthUser({ query: { type: 'public'} })
-        .spread(function(repos) {
+        .then(function(repos) {
           assert(Array.isArray(repos));
           repos.forEach(function(repo) {
             assert(!repo.private);
@@ -54,7 +54,7 @@ describe('repo', function() {
 
     it('listForUser', function(done) {
       ghClient.repo.listForUser('suprememoocow')
-        .spread(function(repos) {
+        .then(function(repos) {
           assert(Array.isArray(repos));
           assert(repos.length > 0);
         })
@@ -63,7 +63,7 @@ describe('repo', function() {
 
     it('listForOrg', function(done) {
       ghClient.repo.listForOrg('gitterHQ')
-        .spread(function(repos) {
+        .then(function(repos) {
           assert(Array.isArray(repos));
           assert(repos.length > 0);
         })
@@ -72,7 +72,7 @@ describe('repo', function() {
 
     it('get', function(done) {
       ghClient.repo.get('gitterHQ/gitter-github-client')
-        .spread(function(repo) {
+        .then(function(repo) {
           assert.strictEqual('gitterHQ/gitter-github-client', repo.full_name);
         })
         .nodeify(done);
@@ -80,7 +80,7 @@ describe('repo', function() {
 
     it('get non-existent', function(done) {
       ghClient.repo.get('gitterHQ/gitter-github-client-asduioisd')
-        .spread(function(repo) {
+        .then(function(repo) {
           assert(!repo);
         })
         .nodeify(done);
@@ -88,7 +88,7 @@ describe('repo', function() {
 
     it('listLanguages', function(done) {
       ghClient.repo.listLanguages('gitterHQ/gitter-github-client')
-        .spread(function(langs) {
+        .then(function(langs) {
           assert(langs.JavaScript);
         })
         .nodeify(done);
@@ -96,7 +96,7 @@ describe('repo', function() {
 
     it('listTeams', function(done) {
       return ghClient.repo.listTeams(publicRepoWithAdmin)
-        .spread(function(teams) {
+        .then(function(teams) {
           assert(Array.isArray(teams));
         })
         .nodeify(done);
@@ -104,7 +104,7 @@ describe('repo', function() {
 
     it('listTags', function(done) {
       ghClient.repo.listTags('gitterHQ/gitter-github-client')
-        .spread(function(tags) {
+        .then(function(tags) {
           assert(Array.isArray(tags));
         })
         .nodeify(done);
@@ -112,7 +112,7 @@ describe('repo', function() {
 
     it('listBranches', function(done) {
       ghClient.repo.listBranches('gitterHQ/gitter-github-client')
-        .spread(function(branches) {
+        .then(function(branches) {
           assert(Array.isArray(branches));
           assert(branches.length > 0);
         })
@@ -121,7 +121,7 @@ describe('repo', function() {
 
     it('getBranch', function(done) {
       ghClient.repo.getBranch('gitterHQ/gitter-github-client', 'master')
-        .spread(function(branch) {
+        .then(function(branch) {
           assert(branch);
         })
         .nodeify(done);

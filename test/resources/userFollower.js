@@ -10,7 +10,7 @@ describe('userFollower', function() {
 
   it('listForUser', function(done) {
     ghClient.userFollower.listForUser('suprememoocow')
-      .spread(function(followers) {
+      .then(function(followers) {
         assert(Array.isArray(followers));
       })
       .nodeify(done);
@@ -18,7 +18,7 @@ describe('userFollower', function() {
 
   it('listForAuthUser', function(done) {
     ghClient.userFollower.listForAuthUser()
-      .spread(function(followers) {
+      .then(function(followers) {
         assert(Array.isArray(followers));
       })
       .nodeify(done);
@@ -26,7 +26,7 @@ describe('userFollower', function() {
 
   it('listFollowingForUser', function(done) {
     ghClient.userFollower.listFollowingForUser('suprememoocow')
-      .spread(function(following) {
+      .then(function(following) {
         assert(Array.isArray(following));
       })
       .nodeify(done);
@@ -34,7 +34,7 @@ describe('userFollower', function() {
 
   it('listFollowingForAuthUser', function(done) {
     ghClient.userFollower.listFollowingForAuthUser()
-      .spread(function(following) {
+      .then(function(following) {
         assert(Array.isArray(following));
       })
       .nodeify(done);
@@ -42,7 +42,7 @@ describe('userFollower', function() {
 
   it('checkAuthUserFollowing', function(done) {
     ghClient.userFollower.checkAuthUserFollowing('suprememoocow')
-      .spread(function(result) {
+      .then(function(result) {
         assert(result === true || result === false);
       })
       .nodeify(done);
@@ -50,7 +50,7 @@ describe('userFollower', function() {
 
   it('checkFollowing', function(done) {
     ghClient.userFollower.checkFollowing('suprememoocow', 'saulklein')
-      .spread(function(result) {
+      .then(function(result) {
         assert.strictEqual(result, true);
       })
       .nodeify(done);

@@ -10,7 +10,7 @@ describe('org', function() {
 
   it('listForAuthUser', function(done) {
     ghClient.org.listForAuthUser()
-      .spread(function(orgs) {
+      .then(function(orgs) {
         assert(Array.isArray(orgs));
         assert(orgs.length > 0);
       })
@@ -19,7 +19,7 @@ describe('org', function() {
 
   it('listForUser', function(done) {
     ghClient.org.listForUser('suprememoocow')
-      .spread(function(orgs) {
+      .then(function(orgs) {
         assert(Array.isArray(orgs));
         assert(orgs.length > 0);
       })
@@ -28,7 +28,7 @@ describe('org', function() {
 
   it('get', function(done) {
     ghClient.org.get('gittertestbotorg')
-      .spread(function(org) {
+      .then(function(org) {
         assert.strictEqual(org.login, 'gittertestbotorg');
       })
       .nodeify(done);
@@ -36,7 +36,7 @@ describe('org', function() {
 
   it('get should return null for an invalid org', function(done) {
     ghClient.org.get('gittertestorg12312312312312')
-      .spread(function(org) {
+      .then(function(org) {
         assert(!org);
       })
       .nodeify(done);
