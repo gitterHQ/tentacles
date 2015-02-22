@@ -1,5 +1,5 @@
 {
-  "name": "gitter-github-client",
+  "name": "gittercat",
   "version": "0.1.2",
   "description": "Gitter GitHub client",
   "main": "lib/client.js",
