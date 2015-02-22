@@ -11,7 +11,7 @@ describe('user', function() {
   });
 
   it('listForRepo', function(done) {
-    ghClient.starring.listForRepo('gitterHQ/gitter')
+    ghClient.watching.listForRepo('gitterHQ/gitter')
       .then(function(users) {
         assert(Array.isArray(users));
         assert(users.length > 0);
@@ -20,7 +20,7 @@ describe('user', function() {
   });
 
   it('listForUser', function(done) {
-    ghClient.starring.listForUser('suprememoocow')
+    ghClient.watching.listForUser('suprememoocow')
       .then(function(users) {
         assert(Array.isArray(users));
         assert(users.length > 0);
@@ -29,17 +29,25 @@ describe('user', function() {
   });
 
   it('listForAuthUser', function(done) {
-    ghClient.starring.listForAuthUser()
-      .then(function(users) {
-        assert(Array.isArray(users));
+    ghClient.watching.listForAuthUser()
+      .then(function(repos) {
+        assert(Array.isArray(repos));
       })
       .nodeify(done);
   });
 
-  it('checkStarForAuthUserForRepo', function(done) {
-    ghClient.starring.checkStarForAuthUserForRepo('gitterHQ/gitter')
-      .then(function(isStarred) {
-        assert(isStarred === true || isStarred === false);
+  it('getSubscriptionForAuthUser', function(done) {
+    ghClient.watching.getSubscriptionForAuthUser('gitterHQ/gitter')
+      .then(function(subscription) {
+        console.log(subscription);
+      })
+      .nodeify(done);
+  });
+
+  it('checkWatchForAuthUser', function(done) {
+    ghClient.watching.checkWatchForAuthUser('gitterHQ/gitter')
+      .then(function(isWatching) {
+        assert(isWatching === true || isWatching === false);
       })
       .nodeify(done);
   });
