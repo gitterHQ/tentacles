@@ -1,0 +1,29 @@
+{
+  "name": "gitter-github-client",
+  "version": "0.1.0",
+  "description": "Gitter GitHub client",
+  "main": "lib/client.js",
+  "scripts": {
+    "test": "mocha --recursive test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitterHQ/gitter-github-client.git"
+  },
+  "keywords": [
+    "Gitter",
+    "GitHub"
+  ],
+  "author": "Andrew Newdigate <andrewn@datatribe.net> (http://about.me/andrewnewdigate)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gitterHQ/gitter-github-client/issues"
+  },
+  "homepage": "https://github.com/gitterHQ/gitter-github-client",
+  "dependencies": {
+    "lodash": "^3.3.0",
+    "q": "^1.2.0",
+    "request": "^2.53.0",
+    "require-directory": "^2.1.0"
+  }
+}
