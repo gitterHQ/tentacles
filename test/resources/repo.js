@@ -71,15 +71,15 @@ describe('repo', function() {
     });
 
     it('get', function(done) {
-      ghClient.repo.get('gitterHQ/gitter-github-client')
+      ghClient.repo.get('gitterHQ/gittercat')
         .then(function(repo) {
-          assert.strictEqual('gitterHQ/gitter-github-client', repo.full_name);
+          assert.strictEqual('gitterHQ/gittercat', repo.full_name);
         })
         .nodeify(done);
     });
 
     it('get non-existent', function(done) {
-      ghClient.repo.get('gitterHQ/gitter-github-client-asduioisd')
+      ghClient.repo.get('gitterHQ/gittercat-asduioisd')
         .then(function(repo) {
           assert(!repo);
         })
@@ -87,7 +87,7 @@ describe('repo', function() {
     });
 
     it('listLanguages', function(done) {
-      ghClient.repo.listLanguages('gitterHQ/gitter-github-client')
+      ghClient.repo.listLanguages('gitterHQ/gittercat')
         .then(function(langs) {
           assert(langs.JavaScript);
         })
@@ -103,7 +103,7 @@ describe('repo', function() {
     });
 
     it('listTags', function(done) {
-      ghClient.repo.listTags('gitterHQ/gitter-github-client')
+      ghClient.repo.listTags('gitterHQ/gittercat')
         .then(function(tags) {
           assert(Array.isArray(tags));
         })
@@ -111,7 +111,7 @@ describe('repo', function() {
     });
 
     it('listBranches', function(done) {
-      ghClient.repo.listBranches('gitterHQ/gitter-github-client')
+      ghClient.repo.listBranches('gitterHQ/gittercat')
         .then(function(branches) {
           assert(Array.isArray(branches));
           assert(branches.length > 0);
@@ -120,7 +120,7 @@ describe('repo', function() {
     });
 
     it('getBranch', function(done) {
-      ghClient.repo.getBranch('gitterHQ/gitter-github-client', 'master')
+      ghClient.repo.getBranch('gitterHQ/gittercat', 'master')
         .then(function(branch) {
           assert(branch);
         })
