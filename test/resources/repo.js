@@ -7,6 +7,8 @@ describe('repo', function() {
     var ghClient, publicRepoWithAdmin;
 
     before(function(done) {
+      assert(process.env.GITHUB_ACCESS_TOKEN, 'Please set GITHUB_ACCESS_TOKEN');
+
       var headers;
 
       if (postMoondragon) {

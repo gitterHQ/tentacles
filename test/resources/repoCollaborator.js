@@ -5,6 +5,8 @@ describe('repoCollaborator', function() {
   var ghClient, publicRepoWithAdmin, username;
 
   before(function(done) {
+    assert(process.env.GITHUB_ACCESS_TOKEN, 'Please set GITHUB_ACCESS_TOKEN');
+
     ghClient = new GHClient({
       accessToken: process.env.GITHUB_ACCESS_TOKEN
     });

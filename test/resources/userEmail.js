@@ -5,6 +5,8 @@ describe('userEmail', function() {
   var ghClient;
 
   before(function() {
+    assert(process.env.GITHUB_ACCESS_TOKEN, 'Please set GITHUB_ACCESS_TOKEN');
+
     ghClient = new GHClient({ accessToken: process.env.GITHUB_ACCESS_TOKEN });
   });
 
