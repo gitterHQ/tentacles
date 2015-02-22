@@ -1,7 +1,7 @@
 var GHClient = require('../..');
 var assert = require('assert');
 
-describe('test', function() {
+describe('userEmail', function() {
   var ghClient;
 
   before(function() {

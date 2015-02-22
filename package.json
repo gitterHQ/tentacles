@@ -4,7 +4,7 @@
   "description": "Gitter GitHub client",
   "main": "lib/client.js",
   "scripts": {
-    "test": "mocha --recursive test/"
+    "test": "mocha --recursive test/ --timeout 10000"
   },
   "repository": {
     "type": "git",
