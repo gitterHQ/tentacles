@@ -4,9 +4,9 @@ var assert = require('assert');
 describe('repo', function() {
 
   function specs(postMoondragon) {
-    var ghClient;
+    var ghClient, publicRepoWithAdmin;
 
-    before(function() {
+    before(function(done) {
       var headers;
 
       if (postMoondragon) {
@@ -19,6 +19,17 @@ describe('repo', function() {
         accessToken: process.env.GITHUB_ACCESS_TOKEN,
         headers: headers
       });
+
+      ghClient.repo.listForAuthUser()
+        .spread(function(repos) {
+          var adminTeams = repos.filter(function(repo) {
+            return repo.permissions.admin && !repo.private;
+          });
+
+          publicRepoWithAdmin = adminTeams[0].full_name;
+        })
+        .nodeify(done);
+
     });
 
     it('listAuthUser', function(done) {
@@ -84,13 +95,7 @@ describe('repo', function() {
     });
 
     it('listTeams', function(done) {
-      ghClient.repo.listForAuthUser()
-        .spread(function(repos) {
-          var adminTeams = repos.filter(function(repo) {
-            return repo.permissions.admin && !repo.private;
-          });
-          return ghClient.repo.listTeams(adminTeams[0].full_name);
-        })
+      return ghClient.repo.listTeams(publicRepoWithAdmin)
         .spread(function(teams) {
           assert(Array.isArray(teams));
         })
