@@ -3,7 +3,7 @@ var assert = require('assert');
 
 describe('spread', function() {
 
-  describe('default', function() {
+  describe('default on', function() {
     var ghClient;
 
     before(function() {
@@ -31,7 +31,7 @@ describe('spread', function() {
 
   });
 
-  describe('default', function() {
+  describe('default off', function() {
     var ghClient;
 
     before(function() {

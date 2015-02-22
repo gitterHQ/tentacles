@@ -13,3 +13,4 @@ deploy:
     secure: I6Xl3psEn/yJ24RKTYpQLRpNQYhVApfw+BH76Hu2FhUTiTmDq3fjxnGPCUfPoF3YgYkE6evTPhh28Mybniuti1EsSRvTzpsY0vPVQCHkyHwu0VxPJ+DXduz71D7ASEIJM0ixH+xJ6vet4+PW7PSb8SDFV6YfeJq1SV8dlRicNFo=
   on:
     tags: true
+    node: 0.10
