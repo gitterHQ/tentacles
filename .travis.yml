@@ -8,6 +8,8 @@ before_script:
 
 script: ./node_modules/.bin/gulp
 
+after_success: ./node_modules/.bin/coveralls --verbose < /output/coverage-reports/lcov.info
+
 env:
   global:
     secure: fQgGBFMGfj9PLZnlUs5xf+H8fESBL9nPsQ1Eo1wF051L++SF9AziDyatGxp2CBN0jYDx0Ub0uJPc4tXrSs4JOXGTCwXzY0PTEEivWlXOGhB0eyxSBKmPKoFzZLBhSQrWeVjvmAHPw3XxvlE7usdhrMqoWyjxk6mCLNNsXiCqIIc=
