@@ -2,6 +2,12 @@ language: node_js
 node_js:
 - '0.11'
 - '0.10'
+
+before_script:
+  - npm install
+
+script: ./node_modules/.bin/gulp
+
 env:
   global:
     secure: fQgGBFMGfj9PLZnlUs5xf+H8fESBL9nPsQ1Eo1wF051L++SF9AziDyatGxp2CBN0jYDx0Ub0uJPc4tXrSs4JOXGTCwXzY0PTEEivWlXOGhB0eyxSBKmPKoFzZLBhSQrWeVjvmAHPw3XxvlE7usdhrMqoWyjxk6mCLNNsXiCqIIc=
