@@ -73,15 +73,15 @@ describe('repo', function() {
     });
 
     it('get', function(done) {
-      ghClient.repo.get('gitterHQ/gittercat')
+      ghClient.repo.get('gitterHQ/tentacles')
         .then(function(repo) {
-          assert.strictEqual('gitterHQ/gittercat', repo.full_name);
+          assert.strictEqual('gitterHQ/tentacles', repo.full_name);
         })
         .nodeify(done);
     });
 
     it('get non-existent', function(done) {
-      ghClient.repo.get('gitterHQ/gittercat-asduioisd')
+      ghClient.repo.get('gitterHQ/tentacles-asduioisd')
         .then(function(repo) {
           assert(!repo);
         })
@@ -89,7 +89,7 @@ describe('repo', function() {
     });
 
     it('listLanguages', function(done) {
-      ghClient.repo.listLanguages('gitterHQ/gittercat')
+      ghClient.repo.listLanguages('gitterHQ/tentacles')
         .then(function(langs) {
           assert(langs.JavaScript);
         })
@@ -105,7 +105,7 @@ describe('repo', function() {
     });
 
     it('listTags', function(done) {
-      ghClient.repo.listTags('gitterHQ/gittercat')
+      ghClient.repo.listTags('gitterHQ/tentacles')
         .then(function(tags) {
           assert(Array.isArray(tags));
         })
@@ -113,7 +113,7 @@ describe('repo', function() {
     });
 
     it('listBranches', function(done) {
-      ghClient.repo.listBranches('gitterHQ/gittercat')
+      ghClient.repo.listBranches('gitterHQ/tentacles')
         .then(function(branches) {
           assert(Array.isArray(branches));
           assert(branches.length > 0);
@@ -122,7 +122,7 @@ describe('repo', function() {
     });
 
     it('getBranch', function(done) {
-      ghClient.repo.getBranch('gitterHQ/gittercat', 'master')
+      ghClient.repo.getBranch('gitterHQ/tentacles', 'master')
         .then(function(branch) {
           assert(branch);
         })

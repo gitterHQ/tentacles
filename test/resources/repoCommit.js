@@ -11,7 +11,7 @@ describe('repoCommit', function() {
   });
 
   it('list', function(done) {
-    ghClient.repoCommit.list('gitterHQ/gittercat')
+    ghClient.repoCommit.list('gitterHQ/tentacles')
       .then(function(commits) {
         assert(Array.isArray(commits));
         assert(commits.length > 0);
@@ -20,7 +20,7 @@ describe('repoCommit', function() {
   });
 
   it('get', function(done) {
-    ghClient.repoCommit.get('gitterHQ/gittercat', '2dcebd7ba1dd1a0132781e7d1408ee5b96fa0346')
+    ghClient.repoCommit.get('gitterHQ/tentacles', '2dcebd7ba1dd1a0132781e7d1408ee5b96fa0346')
       .then(function(commit) {
         assert(commit.sha, '2dcebd7ba1dd1a0132781e7d1408ee5b96fa0346');
       })
@@ -28,7 +28,7 @@ describe('repoCommit', function() {
   });
 
   it('compare', function(done) {
-    ghClient.repoCommit.compare('gitterHQ/gittercat', '2dcebd7ba1dd1a0132781e7d1408ee5b96fa0346', 'bc919da85c41a15f807ce517df9ef5ddd577abca')
+    ghClient.repoCommit.compare('gitterHQ/tentacles', '2dcebd7ba1dd1a0132781e7d1408ee5b96fa0346', 'bc919da85c41a15f807ce517df9ef5ddd577abca')
       .then(function(compare) {
         assert(compare.base_commit.sha, '2dcebd7ba1dd1a0132781e7d1408ee5b96fa0346');
       })
