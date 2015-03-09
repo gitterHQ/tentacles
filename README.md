@@ -59,8 +59,8 @@ All API methods adhere to the same pattern:
 
  * `query`: a hash of query parameters. For example ` { query: { sort: 'state' } } `
  * `accessToken`: the access token to pass in for non-anonymous requests. This will be used to set the `Authorization` header.
- * `spread`: set to true to make the promise return an array of [`body`, `response`], which will give you access to the headers, status code, etc
- * `headers`: a hash of headers to send through with the request. 
+ * `spread`: set to true to make the promise return an array of [`body`, `response`], which will give you access to the headers, status code, etc. [Read more here.](#accessing-the-response)
+ * `headers`: a hash of headers to send through with the request.
 
 ## Anonymous Usage
 
@@ -94,9 +94,34 @@ ghClient.user.get('suprememoocow')
 
 ```
 
-
-
 ## Accessing the Response
+
+Sometimes it's useful to access the response headers. In order to do this, use the
+`spread` option. When `spread` is `true`, the promise will resolve an array of
+[`body`, `response`]. This can then be spread across the parameters of the promise
+callback using Q's `spread` method, like this:
+
+```javascript
+var GHClient = require('tentacles');
+var ghClient = new GHClient();
+
+ghClient.user.get('suprememoocow', { spread: true })
+  .spread(function(user, response) {
+    // Access `response.headers`, `response.statusCode` etc
+  });
+```
+
+It's also possible to specify this option globally, like so
+```javascript
+var GHClient = require('tentacles');
+var ghClient = new GHClient({ spread: true });
+
+ghClient.user.get('suprememoocow')
+  .spread(function(user, response) {
+    // Access `response.headers`, `response.statusCode` etc
+  });
+```
+
 
 ## Contributing
 
