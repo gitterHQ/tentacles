@@ -2,23 +2,20 @@ language: node_js
 node_js:
 - '0.11'
 - '0.10'
-
 before_script:
-  - npm install
-
-script: ./node_modules/.bin/gulp
-
-after_success: ./node_modules/.bin/coveralls --verbose < output/coverage-reports/lcov.info
-
+- npm install
+script: "./node_modules/.bin/gulp"
+after_success: "./node_modules/.bin/coveralls --verbose < output/coverage-reports/lcov.info"
 env:
   global:
-    secure: fQgGBFMGfj9PLZnlUs5xf+H8fESBL9nPsQ1Eo1wF051L++SF9AziDyatGxp2CBN0jYDx0Ub0uJPc4tXrSs4JOXGTCwXzY0PTEEivWlXOGhB0eyxSBKmPKoFzZLBhSQrWeVjvmAHPw3XxvlE7usdhrMqoWyjxk6mCLNNsXiCqIIc=
-
+  - secure: fQgGBFMGfj9PLZnlUs5xf+H8fESBL9nPsQ1Eo1wF051L++SF9AziDyatGxp2CBN0jYDx0Ub0uJPc4tXrSs4JOXGTCwXzY0PTEEivWlXOGhB0eyxSBKmPKoFzZLBhSQrWeVjvmAHPw3XxvlE7usdhrMqoWyjxk6mCLNNsXiCqIIc=
+  - secure: YnsXRdMw/AXeYUOxQ7YLtLLpHYIu+BRJSAt5Sa4MBUgvN9M9dOOD3LEw6gkqWbKf4OSBN0tVTHf08td3vBbU3gGYzwXTDzEl3WHM1YdD1fSjfAHBmFIF/fAYISHUotwZbS1Ya9CkEjOE2dfM6GnM6dPQ8GOQAJ4YHvu4Gom67ko=
+  - secure: TnPkpao0TjMMeS4Hs8F0jzCCy5rChP5dYeI1KrzlNn8ji/JzdGI1IUsQE1tud6Wl3IXL4gAD+SRWRNBf11Fy2EMQwjiTTzCyNpDIxWYBgUz4nZKMwUBPAgpwRl+Sv4qoO+oRyd/qbqKl0Bi8bcgqu/hVIDTswiSHyirMnhdMH5I=
 deploy:
   provider: npm
-  email: "andrewn@datatribe.net"
+  email: andrewn@datatribe.net
   api_key:
     secure: I6Xl3psEn/yJ24RKTYpQLRpNQYhVApfw+BH76Hu2FhUTiTmDq3fjxnGPCUfPoF3YgYkE6evTPhh28Mybniuti1EsSRvTzpsY0vPVQCHkyHwu0VxPJ+DXduz71D7ASEIJM0ixH+xJ6vet4+PW7PSb8SDFV6YfeJq1SV8dlRicNFo=
   on:
     tags: true
-    node: 0.10
+    node: '0.10'
