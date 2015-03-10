@@ -10,7 +10,6 @@ describe('error-handler', function() {
       assert(err);
       assert.strictEqual(err.statusCode, 401);
       assert(err.headers);
-      assert(err.response);
     }});
 
     ghClient.user.getAuthUser()

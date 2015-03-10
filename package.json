@@ -4,7 +4,7 @@
   "description": "Gitter GitHub client",
   "main": "lib/client.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha test/",
     "doc": "rm -rf doc/ && jsdox --index summary --templateDir jsdox_templates/ --output doc/ lib/resources/"
   },
   "repository": {
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/gitterHQ/tentacles",
   "dependencies": {
+    "create-error": "^0.3.1",
     "lodash": "^3.3.0",
     "q": "^1.2.0",
     "request": "^2.53.0",
@@ -32,6 +33,7 @@
     "gulp": "^3.8.11",
     "gulp-spawn-mocha": "^2.0.1",
     "jsdox": "^0.4.9",
-    "mocha": "^2.1.0"
+    "mocha": "^2.1.0",
+    "nock": "^1.1.0"
   }
 }
