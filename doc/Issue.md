@@ -15,7 +15,7 @@ repositories, member repositories, and organization repositories.
 
 **Parameter**| **Description** |
 --------------|---------------
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 

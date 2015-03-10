@@ -13,7 +13,7 @@ Repository Commit
 **Parameter**| **Description** |
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -28,7 +28,7 @@ Repository Commit
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
 **sha** | `String`, sha of the commit|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -44,7 +44,7 @@ Repository Commit
 **full_name** | `String`, owner/repo name of repo|
 **base** | `String`, sha of the base commit|
 **head** | `String`, sha of the head commit|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 

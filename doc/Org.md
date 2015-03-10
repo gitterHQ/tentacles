@@ -16,7 +16,7 @@ List your organizations
 
 **Parameter**| **Description** |
 --------------|---------------
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 

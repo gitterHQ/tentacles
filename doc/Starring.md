@@ -13,7 +13,7 @@ Activity Starring
 **Parameter**| **Description** |
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -27,7 +27,7 @@ Activity Starring
 **Parameter**| **Description** |
 --------------|---------------
 **username** | `String`, username of the user|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -40,7 +40,7 @@ Activity Starring
 
 **Parameter**| **Description** |
 --------------|---------------
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -54,7 +54,7 @@ Activity Starring
 **Parameter**| **Description** |
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 

@@ -13,7 +13,7 @@ Search
 **Parameter**| **Description** |
 --------------|---------------
 **query** | `String`, Search query|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -32,7 +32,7 @@ Search
 **Parameter**| **Description** |
 --------------|---------------
 **query** | `String`, Search query|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -70,7 +70,7 @@ Search
 **Parameter**| **Description** |
 --------------|---------------
 **query** | `String`, Search query|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 

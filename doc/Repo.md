@@ -12,7 +12,7 @@ Repository
 
 **Parameter**| **Description** |
 --------------|---------------
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -26,7 +26,7 @@ Repository
 **Parameter**| **Description** |
 --------------|---------------
 **username** | `String`, username of the user|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -40,7 +40,7 @@ Repository
 **Parameter**| **Description** |
 --------------|---------------
 **org** | `String`, org name|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -54,7 +54,7 @@ Repository
 **Parameter**| **Description** |
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -68,7 +68,7 @@ Repository
 **Parameter**| **Description** |
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -82,7 +82,7 @@ Repository
 **Parameter**| **Description** |
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -96,7 +96,7 @@ Repository
 **Parameter**| **Description** |
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -110,7 +110,7 @@ Repository
 **Parameter**| **Description** |
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -124,7 +124,7 @@ Repository
 **Parameter**| **Description** |
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -139,7 +139,7 @@ Repository
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
 **branch** | `String`, name of the branch|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 

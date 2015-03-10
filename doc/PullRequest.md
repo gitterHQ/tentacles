@@ -13,7 +13,7 @@ Pull Request
 **Parameter**| **Description** |
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -28,7 +28,7 @@ Pull Request
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
 **number** | `String`, pull request number|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -43,7 +43,7 @@ Pull Request
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
 **number** | `String`, pull request number|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -58,7 +58,7 @@ Pull Request
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
 **number** | `String`, pull request number|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -73,7 +73,7 @@ Pull Request
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
 **number** | `String`, pull request number|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 

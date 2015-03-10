@@ -79,6 +79,10 @@ The following resources are supports
  * **Activity**
    * [`tentacles.starring`](doc/Starring.md)
    * [`tentacles.watching`](doc/Watching.md)
+ * **Git Data**
+   * [`tentacles.gitCommit`](doc/GitCommit.md)
+   * [`tentacles.gitRef`](doc/GitRef.md)
+   * [`tentacles.gitTree`](doc/GitTree.md)
  * **Issues**  
    * [`tentacles.issue`](doc/Issue.md)
  * **Organisations**  
@@ -90,6 +94,7 @@ The following resources are supports
    * [`tentacles.repo`](doc/Repo.md)
    * [`tentacles.repoCollaborator`](doc/RepoCollaborator.md)
    * [`tentacles.repoCommit`](doc/RepoCommit.md)
+   * [`tentacles.repoContent`](doc/RepoContent.md)
  * **Search**
    * [`tentacles.search`](doc/Search.md)
  * **User**

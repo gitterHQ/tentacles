@@ -52,8 +52,63 @@ Check public membership (in [..&#x2F;lib&#x2F;resources&#x2F;OrgMember.js](../li
 
 
 
+###[create](GitTree.md):
+Create a Tree
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;trees&#x2F;#create-a-tree) (in [..&#x2F;lib&#x2F;resources&#x2F;GitTree.js](../lib/resources/GitTree.js))
+
+
+
+###[create](GitCommit.md):
+Create a Commit
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;commits&#x2F;#create-a-commit) (in [..&#x2F;lib&#x2F;resources&#x2F;GitCommit.js](../lib/resources/GitCommit.js))
+
+
+
+###[create](GitRef.md):
+Create a Reference
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#create-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
+
+
+
+###[createFile](RepoContent.md):
+Create a file
+
+This method creates a new file in a repository
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;contents&#x2F;#create-a-file) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoContent.js](../lib/resources/RepoContent.js))
+
+
+
+###[delete](GitRef.md):
+Delete a Reference
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#delete-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
+
+
+
+###[deleteFile](RepoContent.md):
+Delete a file
+This method deletes a file in a repository
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;contents&#x2F;#delete-a-file) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoContent.js](../lib/resources/RepoContent.js))
+
+
+
+###[get](RepoCommit.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;RepoCommit.js](../lib/resources/RepoCommit.js))
+
+
+
 ###[get](Repo.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
+
+
+
+###[get](PullRequest.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequest.js](../lib/resources/PullRequest.js))
 
 
 
@@ -64,11 +119,6 @@ Get an organization
 
 
 
-###[get](User.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;User.js](../lib/resources/User.js))
-
-
-
 ###[get](Issue.md):
 Get a single issue
 
@@ -76,13 +126,29 @@ Get a single issue
 
 
 
-###[get](RepoCommit.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;RepoCommit.js](../lib/resources/RepoCommit.js))
+###[get](GitRef.md):
+Get a Reference
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#get-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
 
 
 
-###[get](PullRequest.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequest.js](../lib/resources/PullRequest.js))
+###[get](GitCommit.md):
+Get a Commit
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;commits&#x2F;#get-a-commit) (in [..&#x2F;lib&#x2F;resources&#x2F;GitCommit.js](../lib/resources/GitCommit.js))
+
+
+
+###[get](User.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;User.js](../lib/resources/User.js))
+
+
+
+###[get](GitTree.md):
+Get a Tree
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;trees&#x2F;#get-a-tree) (in [..&#x2F;lib&#x2F;resources&#x2F;GitTree.js](../lib/resources/GitTree.js))
 
 
 
@@ -96,6 +162,15 @@ Get a single issue
 
 
 
+###[getContents](RepoContent.md):
+Get contents
+
+This method returns the contents of a file or directory in a repository.
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;contents&#x2F;#get-contents) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoContent.js](../lib/resources/RepoContent.js))
+
+
+
 ###[getMembershipForAuthUser](OrgMember.md):
 Get your organization membership (in [..&#x2F;lib&#x2F;resources&#x2F;OrgMember.js](../lib/resources/OrgMember.js))
 
@@ -103,6 +178,15 @@ Get your organization membership (in [..&#x2F;lib&#x2F;resources&#x2F;OrgMember.
 
 ###[getMembershipForUser](OrgMember.md):
 Get organization membership (in [..&#x2F;lib&#x2F;resources&#x2F;OrgMember.js](../lib/resources/OrgMember.js))
+
+
+
+###[getReadme](RepoContent.md):
+Get the README
+
+This method returns the preferred README for a repository.
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;contents&#x2F;#get-the-readme) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoContent.js](../lib/resources/RepoContent.js))
 
 
 
@@ -123,6 +207,13 @@ Get organization membership (in [..&#x2F;lib&#x2F;resources&#x2F;OrgMember.js](.
 
 ###[list](RepoCommit.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;RepoCommit.js](../lib/resources/RepoCommit.js))
+
+
+
+###[listAll](GitRef.md):
+Get all References
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#get-all-references) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
 
 
 
@@ -171,20 +262,8 @@ repositories, member repositories, and organization repositories.
 
 
 
-###[listForAuthUser](Org.md):
-List your organizations
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#list-your-organizations) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
-
-
-
 ###[listForAuthUser](UserFollower.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
-
-
-
-###[listForAuthUser](UserEmail.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;UserEmail.js](../lib/resources/UserEmail.js))
 
 
 
@@ -198,8 +277,20 @@ List your organizations
 
 
 
+###[listForAuthUser](Org.md):
+List your organizations
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#list-your-organizations) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
+
+
+
 ###[listForAuthUser](Starring.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
+
+
+
+###[listForAuthUser](UserEmail.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;UserEmail.js](../lib/resources/UserEmail.js))
 
 
 
@@ -220,6 +311,11 @@ List all issues for a given organization for the authenticated user
 
 
 
+###[listForRepo](PullRequest.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequest.js](../lib/resources/PullRequest.js))
+
+
+
 ###[listForRepo](Starring.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
 
@@ -232,18 +328,13 @@ List issues for a repository
 
 
 
-###[listForRepo](PullRequest.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequest.js](../lib/resources/PullRequest.js))
+###[listForUser](Watching.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
 
 
 
-###[listForUser](Repo.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
-
-
-
-###[listForUser](UserFollower.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
+###[listForUser](Starring.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
 
 
 
@@ -254,13 +345,13 @@ List user organizations
 
 
 
-###[listForUser](Watching.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
+###[listForUser](UserFollower.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
 
 
 
-###[listForUser](Starring.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
+###[listForUser](Repo.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
 
 
 
@@ -296,6 +387,22 @@ Public members list (in [..&#x2F;lib&#x2F;resources&#x2F;OrgMember.js](../lib/re
 
 ###[repos](Search.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;Search.js](../lib/resources/Search.js))
+
+
+
+###[update](GitRef.md):
+Update a Reference
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#update-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
+
+
+
+###[updateFile](RepoContent.md):
+Update a file
+
+This method updates a file in a repository
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;contents&#x2F;#update-a-file) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoContent.js](../lib/resources/RepoContent.js))
 
 
 

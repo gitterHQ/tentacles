@@ -15,7 +15,7 @@ Members list
 **Parameter**| **Description** |
 --------------|---------------
 **org** | `String`, org name|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -30,7 +30,7 @@ Check membership
 --------------|---------------
 **org** | `String`, org name|
 **username** | `String`, username|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -44,7 +44,7 @@ Public members list
 **Parameter**| **Description** |
 --------------|---------------
 **org** | `String`, org name|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -59,7 +59,7 @@ Check public membership
 --------------|---------------
 **org** | `String`, org name|
 **username** | `String`, username|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -74,7 +74,7 @@ Get organization membership
 --------------|---------------
 **org** | `String`, org name|
 **username** | `String`, username|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -87,7 +87,7 @@ List your organization memberships
 
 **Parameter**| **Description** |
 --------------|---------------
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
@@ -101,7 +101,7 @@ Get your organization membership
 **Parameter**| **Description** |
 --------------|---------------
 **org** | `String`, org name|
-**options** | `Object`, Optional request options.|
+**options** | `Object`, Optional request options|
 
 
 
