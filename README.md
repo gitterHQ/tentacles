@@ -1,13 +1,15 @@
 tentacles [![Build Status](https://travis-ci.org/gitterHQ/tentacles.svg?branch=v0.1.8)](https://travis-ci.org/gitterHQ/tentacles) [![Coverage Status](https://coveralls.io/repos/gitterHQ/tentacles/badge.svg?branch=master)](https://coveralls.io/r/gitterHQ/tentacles?branch=master)
 =========
 
-Tentacles is a customisable, promise-based GitHub client for node.js. It's
+Tentacles is a extensible, promise-based GitHub client for node.js. It's
 designed to be easy to configure and to be as stateless as possible, making it
 suitable for server environments.
 
-It does not yet cover the entire GitHub API: the methods currently available are
-mostly those used by Gitter. It is, however, very easy to extend and we welcome
-pull-requests.
+It can also cache GitHub HTTP responses to speed up your app and reduce rate limits.
+
+Tentacles does not yet cover the entire GitHub API: the methods currently available are
+mostly those used by [Gitter](https://gitter.im). It is, however, very easy to extend
+and we welcome pull-requests.
 
 The client aims to maintain a direct one-to-one mapping with the GitHub API as much
 as possible.
@@ -173,6 +175,50 @@ tentacles.user.get('suprememoocow')
   .spread(function(user, response) {
     // Access `response.headers`, `response.statusCode` etc
   });
+```
+
+## Extensibility
+
+Under the covers, Tentacles uses [request-extensible](https://github.com/suprememoocow/request-extensible)
+to allow additional middleware layers to be added to the outgoing (or incoming)
+GitHub API request. This adds a great deal of extensiblity to the library.
+
+Add extensions through the `extensions` option on the constructor:
+
+```javascript
+var Tentacles = require('tentacles');
+var tentacles = new Tentacles({
+  extensions: [
+    githubApiStats,       // These are request-extensible extensions
+    rateLimiterWarning
+  ]
+});
+```
+
+## Caching GitHub API responses
+
+By using HTTP caching semantics and conditional requests you can speed up your application
+and reduce rate limiting. We've built an [request-http-cache](https://github.com/gitterHQ/request-http-cache)
+for Tentacles to do exactly this.
+
+You can cache responses from GitHub in-memory, or (better for production) in a Redis instance.
+
+Read more over at [request-http-cache](https://github.com/gitterHQ/request-http-cache).
+
+Here's a simple example setup:
+
+```javascript
+var RequestHttpCache = require('request-http-cache');
+var httpRequestCache = new RequestHttpCache({
+  max: 1024*1024 // Maximum cache size (1mb) defaults to 512Kb
+});
+
+var Tentacles = require('tentacles');
+var tentacles = new Tentacles({
+  extensions: [
+    httpRequestCache.extension
+  ]
+});
 ```
 
 ## Authors
