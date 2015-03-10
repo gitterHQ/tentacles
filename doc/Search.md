@@ -19,7 +19,7 @@ Search
 
 **Example**:
 ```js
-client.search.repos('faye websockets')
+tentacles.search.repos('faye websockets')
 ```
 
 
@@ -38,7 +38,7 @@ Search
 
 **Example**:
 ```js
-client.search.code('gitter user:suprememoocow')
+tentacles.search.code('gitter user:suprememoocow')
 ```
 
 
@@ -57,7 +57,7 @@ Search
 
 **Example**:
 ```js
-client.search.issues('gitter')
+tentacles.search.issues('gitter')
 ```
 
 
@@ -76,7 +76,7 @@ Search
 
 **Example**:
 ```js
-client.search.users('suprememoocow type:user')
+tentacles.search.users('suprememoocow type:user')
 ```
 
 

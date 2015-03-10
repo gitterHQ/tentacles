@@ -9,16 +9,18 @@ It does not yet cover the entire GitHub API: the methods currently available are
 mostly those used by Gitter. It is, however, very easy to extend and we welcome
 pull-requests.
 
+The client aims to maintain a direct one-to-one mapping with the GitHub API as much
+as possible.
 
 # Usage
 
 Basic usage is straight-forward:
 
 ```javascript
-var GHClient = require('tentacles');
-var ghClient = new GHClient();
+var Tentacles = require('tentacles');
+var tentacles = new Tentacles();
 
-ghClient.user.get('suprememoocow')
+tentacles.user.get('suprememoocow')
   .then(function(user) {
     // ...
   });
@@ -27,10 +29,10 @@ ghClient.user.get('suprememoocow')
 To specify an access token:
 
 ```javascript
-var GHClient = require('tentacles');
-var ghClient = new GHClient();
+var Tentacles = require('tentacles');
+var tentacles = new Tentacles();
 
-ghClient.user.get('suprememoocow', { accessToken: '...' })
+tentacles.user.get('suprememoocow', { accessToken: '...' })
   .then(function(user) {
     // ...
   });
@@ -39,10 +41,10 @@ ghClient.user.get('suprememoocow', { accessToken: '...' })
 ... or specify the access token globally ...
 
 ```javascript
-var GHClient = require('tentacles');
-var ghClient = new GHClient({ accessToken: '...' });
+var Tentacles = require('tentacles');
+var tentacles = new Tentacles({ accessToken: '...' });
 
-ghClient.user.get('suprememoocow')
+tentacles.user.get('suprememoocow')
   .then(function(user) {
     // ...
   });
@@ -62,6 +64,52 @@ All API methods adhere to the same pattern:
  * `spread`: set to true to make the promise return an array of [`body`, `response`], which will give you access to the headers, status code, etc. [Read more here.](#accessing-the-response)
  * `headers`: a hash of headers to send through with the request.
 
+#### Prefixes
+
+Methods which return a **boolean value** will generally be prefixed with `check`.
+
+Methods which return a **single object** will generally be prefixed with `get`.
+
+Methods which return an **array** will generally be prefixed with `list`.
+
+## Resources
+
+The following resources are supports
+
+ * **Activity**
+   * [`tentacles.starring`](doc/Starring.md)
+   * [`tentacles.watching`](doc/Watching.md)
+ * **Issues**  
+   * [`tentacles.issue`](doc/Issue.md)
+ * **Organisations**  
+   * [`tentacles.org`](doc/Org.md)
+   * [`tentacles.orgMember`](doc/OrgMember.md)
+ * **Pull Requests**
+   * [`tentacles.pullRequest`](doc/PullRequest.md)
+ * **Repositories**
+   * [`tentacles.repo`](doc/Repo.md)
+   * [`tentacles.repoCollaborator`](doc/RepoCollaborator.md)
+   * [`tentacles.repoCommit`](doc/RepoCommit.md)
+ * **Search**
+   * [`tentacles.search`](doc/Search.md)
+ * **User**
+   * [`tentacles.user`](doc/User.md)
+   * [`tentacles.userEmail`](doc/UserEmail.md)
+   * [`tentacles.userFollower`](doc/UserFollower.md)
+
+## Global Default Headers
+
+It's possible to configure global default headers, which will be sent on all requests (unless overridden in the method options),
+by specifying the `headers` option in the constructor.
+
+```javascript
+var tentacles = new Tentacles({
+  headers: {
+    Accept: 'application/vnd.github.moondragon+json'
+  },
+});
+```
+
 ## Anonymous Usage
 
 GitHub heavily limits anonymous API usage. If you expect to be using the API
@@ -69,10 +117,10 @@ for anonymous users, it's highly recommended that you pass in a `clientId`/`clie
 This will allow a much higher API limit.
 
 ```javascript
-var GHClient = require('tentacles');
-var ghClient = new GHClient({ clientId: '...', clientSecret: '...' });
+var Tentacles = require('tentacles');
+var tentacles = new Tentacles({ clientId: '...', clientSecret: '...' });
 
-ghClient.user.get('suprememoocow')
+tentacles.user.get('suprememoocow')
   .then(function(user) {
     // ...
   });
@@ -84,10 +132,10 @@ set of credentials for anonymous usage, use `anonymousClientId`/`anonymousClient
 instead:
 
 ```javascript
-var GHClient = require('tentacles');
-var ghClient = new GHClient({ anonymousClientId: '...', anonymousClientSecret: '...' });
+var Tentacles = require('tentacles');
+var tentacles = new Tentacles({ anonymousClientId: '...', anonymousClientSecret: '...' });
 
-ghClient.user.get('suprememoocow')
+tentacles.user.get('suprememoocow')
   .then(function(user) {
     // ...
   });
@@ -102,10 +150,10 @@ Sometimes it's useful to access the response headers. In order to do this, use t
 callback using Q's `spread` method, like this:
 
 ```javascript
-var GHClient = require('tentacles');
-var ghClient = new GHClient();
+var Tentacles = require('tentacles');
+var tentacles = new Tentacles();
 
-ghClient.user.get('suprememoocow', { spread: true })
+tentacles.user.get('suprememoocow', { spread: true })
   .spread(function(user, response) {
     // Access `response.headers`, `response.statusCode` etc
   });
@@ -113,10 +161,10 @@ ghClient.user.get('suprememoocow', { spread: true })
 
 It's also possible to specify this option globally, like so
 ```javascript
-var GHClient = require('tentacles');
-var ghClient = new GHClient({ spread: true });
+var Tentacles = require('tentacles');
+var tentacles = new Tentacles({ spread: true });
 
-ghClient.user.get('suprememoocow')
+tentacles.user.get('suprememoocow')
   .spread(function(user, response) {
     // Access `response.headers`, `response.statusCode` etc
   });
@@ -127,6 +175,9 @@ ghClient.user.get('suprememoocow')
 
 Please adhere to the [airbnb/javascript](https://github.com/airbnb/javascript)
 style guide for any PRs.
+
+Please add documentation for any methods in the [JSDox format](http://jsdox.org).
+To regenerate the markdown documentation, run `npm run-script doc`
 
 #### Where to put your changes
 

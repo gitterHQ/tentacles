@@ -21,7 +21,7 @@ repositories, member repositories, and organization repositories.
 
 **Example**:
 ```js
-client.issue.listAllVisibleForAuthUser({ query: { state: 'open' } })
+tentacles.issue.listAllVisibleForAuthUser({ query: { state: 'open' } })
 ```
 
 
