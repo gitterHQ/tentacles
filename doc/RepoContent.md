@@ -24,7 +24,7 @@ This method returns the preferred README for a repository.
 
 ---------------------------
 
-### repoContent.getContents(full_name, options) 
+### repoContent.getContents(full_name, path, options) 
 
 Get contents
 
@@ -35,6 +35,7 @@ This method returns the contents of a file or directory in a repository.
 **Parameter**| **Description** |
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
+**path** | `String`, path of the file|
 **options** | `Object`, Optional request options|
 
 

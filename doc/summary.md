@@ -52,10 +52,10 @@ Check public membership (in [..&#x2F;lib&#x2F;resources&#x2F;OrgMember.js](../li
 
 
 
-###[create](GitTree.md):
-Create a Tree
+###[create](GitRef.md):
+Create a Reference
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;trees&#x2F;#create-a-tree) (in [..&#x2F;lib&#x2F;resources&#x2F;GitTree.js](../lib/resources/GitTree.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#create-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
 
 
 
@@ -66,10 +66,10 @@ Create a Commit
 
 
 
-###[create](GitRef.md):
-Create a Reference
+###[create](GitTree.md):
+Create a Tree
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#create-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;trees&#x2F;#create-a-tree) (in [..&#x2F;lib&#x2F;resources&#x2F;GitTree.js](../lib/resources/GitTree.js))
 
 
 
@@ -97,8 +97,34 @@ This method deletes a file in a repository
 
 
 
+###[get](GitCommit.md):
+Get a Commit
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;commits&#x2F;#get-a-commit) (in [..&#x2F;lib&#x2F;resources&#x2F;GitCommit.js](../lib/resources/GitCommit.js))
+
+
+
+###[get](GitRef.md):
+Get a Reference
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#get-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
+
+
+
+###[get](User.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;User.js](../lib/resources/User.js))
+
+
+
 ###[get](RepoCommit.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;RepoCommit.js](../lib/resources/RepoCommit.js))
+
+
+
+###[get](Org.md):
+Get an organization
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#get-an-organization) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
 
 
 
@@ -112,36 +138,10 @@ This method deletes a file in a repository
 
 
 
-###[get](Org.md):
-Get an organization
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#get-an-organization) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
-
-
-
 ###[get](Issue.md):
 Get a single issue
 
 [GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;#get-a-single-issue) (in [..&#x2F;lib&#x2F;resources&#x2F;Issue.js](../lib/resources/Issue.js))
-
-
-
-###[get](GitRef.md):
-Get a Reference
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#get-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
-
-
-
-###[get](GitCommit.md):
-Get a Commit
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;commits&#x2F;#get-a-commit) (in [..&#x2F;lib&#x2F;resources&#x2F;GitCommit.js](../lib/resources/GitCommit.js))
-
-
-
-###[get](User.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;User.js](../lib/resources/User.js))
 
 
 
@@ -200,13 +200,13 @@ This method returns the preferred README for a repository.
 
 
 
-###[list](RepoCollaborator.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;RepoCollaborator.js](../lib/resources/RepoCollaborator.js))
-
-
-
 ###[list](RepoCommit.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;RepoCommit.js](../lib/resources/RepoCommit.js))
+
+
+
+###[list](RepoCollaborator.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;RepoCollaborator.js](../lib/resources/RepoCollaborator.js))
 
 
 
@@ -262,8 +262,8 @@ repositories, member repositories, and organization repositories.
 
 
 
-###[listForAuthUser](UserFollower.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
+###[listForAuthUser](Starring.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
 
 
 
@@ -284,8 +284,8 @@ List your organizations
 
 
 
-###[listForAuthUser](Starring.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
+###[listForAuthUser](UserFollower.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
 
 
 
@@ -311,16 +311,6 @@ List all issues for a given organization for the authenticated user
 
 
 
-###[listForRepo](PullRequest.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequest.js](../lib/resources/PullRequest.js))
-
-
-
-###[listForRepo](Starring.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
-
-
-
 ###[listForRepo](Issue.md):
 List issues for a repository
 
@@ -328,12 +318,12 @@ List issues for a repository
 
 
 
-###[listForUser](Watching.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
+###[listForRepo](PullRequest.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequest.js](../lib/resources/PullRequest.js))
 
 
 
-###[listForUser](Starring.md):
+###[listForRepo](Starring.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
 
 
@@ -345,13 +335,23 @@ List user organizations
 
 
 
-###[listForUser](UserFollower.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
-
-
-
 ###[listForUser](Repo.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
+
+
+
+###[listForUser](Starring.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
+
+
+
+###[listForUser](Watching.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
+
+
+
+###[listForUser](UserFollower.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
 
 
 
