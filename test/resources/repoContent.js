@@ -1,41 +1,49 @@
 var GHClient = require('../..');
 var assert = require('assert');
-var nock = require('nock');
-nock.enableNetConnect();
 
 describe('repoContent', function() {
-  var ghClient;
 
-  before(function() {
-    assert(process.env.GITHUB_ACCESS_TOKEN, 'Please set GITHUB_ACCESS_TOKEN');
+  describe('non mocked', function() {
+    var ghClient;
 
-    ghClient = new GHClient({ accessToken: process.env.GITHUB_ACCESS_TOKEN });
-  });
+    before(function() {
+      assert(process.env.GITHUB_ACCESS_TOKEN, 'Please set GITHUB_ACCESS_TOKEN');
 
-  it('getReadme', function(done) {
-    ghClient.repoContent.getReadme('gitterHQ/tentacles')
-      .then(function(content) {
-        assert.strictEqual(content.name, 'README.md');
-      })
-      .nodeify(done);
-  });
+      ghClient = new GHClient({ accessToken: process.env.GITHUB_ACCESS_TOKEN });
+    });
 
-  it('getContents', function(done) {
-    ghClient.repoContent.getContents('gitterHQ/tentacles', 'README.md')
-      .then(function(content) {
-        assert.strictEqual(content.name, 'README.md');
-      })
-      .nodeify(done);
+    it('getReadme', function(done) {
+      ghClient.repoContent.getReadme('gitterHQ/tentacles')
+        .then(function(content) {
+          assert.strictEqual(content.name, 'README.md');
+        })
+        .nodeify(done);
+    });
+
+    it('getContents', function(done) {
+      ghClient.repoContent.getContents('gitterHQ/tentacles', 'README.md')
+        .then(function(content) {
+          assert.strictEqual(content.name, 'README.md');
+        })
+        .nodeify(done);
+    });
   });
 
   describe('mocked', function() {
+    var mockRequest, requestCalls, requestOptions;
+
     beforeEach(function() {
-      nock.disableNetConnect();
+      requestCalls = 0;
+      requestOptions = null;
+      mockRequest = function(options, callback) {
+        requestCalls++;
+        requestOptions = options;
+        callback(null, { statusCode: 200 }, { });
+      };
+
+      ghClient = new GHClient({ accessToken: process.env.GITHUB_ACCESS_TOKEN, request: mockRequest });
     });
 
-    afterEach(function() {
-      nock.enableNetConnect();
-    });
 
     it('createFile', function(done) {
       var body = {
@@ -48,13 +56,12 @@ describe('repoContent', function() {
         "content": "bXkgbmV3IGZpbGUgY29udGVudHM="
       };
 
-      var scope = nock('https://api.github.com')
-        .put('/repos/suprememoocow/playground/contents/text.txt', JSON.stringify(body))
-        .reply(201);
-
       ghClient.repoContent.createFile('suprememoocow/playground', 'text.txt', body)
         .then(function() {
-          scope.done();
+          assert.strictEqual(requestCalls, 1);
+          assert.strictEqual(requestOptions.uri, 'https://api.github.com/repos/suprememoocow/playground/contents/text.txt');
+          assert.strictEqual(requestOptions.method, 'PUT');
+          assert.deepEqual(requestOptions.body, body);
         })
         .nodeify(done);
     });
@@ -70,13 +77,12 @@ describe('repoContent', function() {
         sha: "329688480d39049927147c162b9d2deaf885005f"
       };
 
-      var scope = nock('https://api.github.com')
-        .put('/repos/suprememoocow/playground/contents/test.txt', JSON.stringify(body))
-        .reply(201);
-
       ghClient.repoContent.updateFile('suprememoocow/playground', 'test.txt', body)
         .then(function() {
-          scope.done();
+          assert.strictEqual(requestCalls, 1);
+          assert.equal(requestOptions.uri, 'https://api.github.com/repos/suprememoocow/playground/contents/test.txt');
+          assert.strictEqual(requestOptions.method, 'PUT');
+          assert.deepEqual(requestOptions.body, body);
         })
         .nodeify(done);
     });
@@ -91,13 +97,12 @@ describe('repoContent', function() {
         sha: "329688480d39049927147c162b9d2deaf885005f"
       };
 
-      var scope = nock('https://api.github.com')
-        .delete('/repos/suprememoocow/playground/contents/test.txt', JSON.stringify(body))
-        .reply(200);
-
       ghClient.repoContent.deleteFile('suprememoocow/playground', 'test.txt', body)
         .then(function() {
-          scope.done();
+          assert.strictEqual(requestCalls, 1);
+          assert.equal(requestOptions.uri, 'https://api.github.com/repos/suprememoocow/playground/contents/test.txt');
+          assert.strictEqual(requestOptions.method, 'DELETE');
+          assert.deepEqual(requestOptions.body, body);
         })
         .nodeify(done);
     });
