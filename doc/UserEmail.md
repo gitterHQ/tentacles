@@ -6,11 +6,18 @@ User Email
 
 * * *
 
-### userEmail.listForAuthUser() 
+### userEmail.listForAuthUser(options) 
 
 User Email
 
+**Parameter**| **Description** |
+--------------|---------------
+**options** | `Object`, Optional request options.|
 
+
+
+
+---------------------------
 
 
 * * *

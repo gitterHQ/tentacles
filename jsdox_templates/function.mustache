@@ -9,13 +9,14 @@ Deprecated: {{{deprecated}}}
 
 {{/deprecated}}
 {{#hasParams}}
-**Parameters**
-
+**Parameter**| **Description** |
+--------------|---------------
 {{/hasParams}}
 {{#params}}
-**{{name}}**: {{#typesString}}`{{typesString}}`{{/typesString}}{{#description}}, {{{description}}}{{/description}}
-
+**{{name}}** | {{#typesString}}`{{typesString}}`{{/typesString}}{{#description}}, {{{description}}}{{/description}}|
 {{/params}}
+
+
 {{#fires}}
 **Fires**: {{.}}
 
@@ -31,3 +32,5 @@ Deprecated: {{{deprecated}}}
 ```
 
 {{/examples}}
+
+---------------------------

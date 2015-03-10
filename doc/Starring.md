@@ -6,29 +6,60 @@ Activity Starring
 
 * * *
 
-### starring.listForRepo() 
+### starring.listForRepo(full_name, options) 
 
 Activity Starring
 
-
-
-### starring.listForUser() 
-
-Activity Starring
-
-
-
-### starring.listForAuthUser() 
-
-Activity Starring
+**Parameter**| **Description** |
+--------------|---------------
+**full_name** | `String`, owner/repo name of repo|
+**options** | `Object`, Optional request options.|
 
 
 
-### starring.checkStarForAuthUserForRepo() 
+
+---------------------------
+
+### starring.listForUser(username, options) 
 
 Activity Starring
 
+**Parameter**| **Description** |
+--------------|---------------
+**username** | `String`, username of the user|
+**options** | `Object`, Optional request options.|
 
+
+
+
+---------------------------
+
+### starring.listForAuthUser(options) 
+
+Activity Starring
+
+**Parameter**| **Description** |
+--------------|---------------
+**options** | `Object`, Optional request options.|
+
+
+
+
+---------------------------
+
+### starring.checkStarForAuthUserForRepo(full_name, options) 
+
+Activity Starring
+
+**Parameter**| **Description** |
+--------------|---------------
+**full_name** | `String`, owner/repo name of repo|
+**options** | `Object`, Optional request options.|
+
+
+
+
+---------------------------
 
 
 * * *

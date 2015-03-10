@@ -6,65 +6,145 @@ Repository
 
 * * *
 
-### repo.listForAuthUser() 
+### repo.listForAuthUser(options) 
 
 Repository
 
-
-
-### repo.listForUser() 
-
-Repository
-
-
-
-### repo.listForOrg() 
-
-Repository
+**Parameter**| **Description** |
+--------------|---------------
+**options** | `Object`, Optional request options.|
 
 
 
-### repo.get() 
+
+---------------------------
+
+### repo.listForUser(username, options) 
 
 Repository
 
-
-
-### repo.listContributors() 
-
-Repository
-
-
-
-### repo.listLanguages() 
-
-Repository
+**Parameter**| **Description** |
+--------------|---------------
+**username** | `String`, username of the user|
+**options** | `Object`, Optional request options.|
 
 
 
-### repo.listTeams() 
+
+---------------------------
+
+### repo.listForOrg(org, options) 
 
 Repository
 
-
-
-### repo.listTags() 
-
-Repository
-
-
-
-### repo.listBranches() 
-
-Repository
+**Parameter**| **Description** |
+--------------|---------------
+**org** | `String`, org name|
+**options** | `Object`, Optional request options.|
 
 
 
-### repo.getBranch() 
+
+---------------------------
+
+### repo.get(full_name, options) 
 
 Repository
 
+**Parameter**| **Description** |
+--------------|---------------
+**full_name** | `String`, owner/repo name of repo|
+**options** | `Object`, Optional request options.|
 
+
+
+
+---------------------------
+
+### repo.listContributors(full_name, options) 
+
+Repository
+
+**Parameter**| **Description** |
+--------------|---------------
+**full_name** | `String`, owner/repo name of repo|
+**options** | `Object`, Optional request options.|
+
+
+
+
+---------------------------
+
+### repo.listLanguages(full_name, options) 
+
+Repository
+
+**Parameter**| **Description** |
+--------------|---------------
+**full_name** | `String`, owner/repo name of repo|
+**options** | `Object`, Optional request options.|
+
+
+
+
+---------------------------
+
+### repo.listTeams(full_name, options) 
+
+Repository
+
+**Parameter**| **Description** |
+--------------|---------------
+**full_name** | `String`, owner/repo name of repo|
+**options** | `Object`, Optional request options.|
+
+
+
+
+---------------------------
+
+### repo.listTags(full_name, options) 
+
+Repository
+
+**Parameter**| **Description** |
+--------------|---------------
+**full_name** | `String`, owner/repo name of repo|
+**options** | `Object`, Optional request options.|
+
+
+
+
+---------------------------
+
+### repo.listBranches(full_name, options) 
+
+Repository
+
+**Parameter**| **Description** |
+--------------|---------------
+**full_name** | `String`, owner/repo name of repo|
+**options** | `Object`, Optional request options.|
+
+
+
+
+---------------------------
+
+### repo.getBranch(full_name, branch, options) 
+
+Repository
+
+**Parameter**| **Description** |
+--------------|---------------
+**full_name** | `String`, owner/repo name of repo|
+**branch** | `String`, name of the branch|
+**options** | `Object`, Optional request options.|
+
+
+
+
+---------------------------
 
 
 * * *

@@ -14,11 +14,14 @@ List your organizations
 
 [GitHub API](https://developer.github.com/v3/orgs/#list-your-organizations)
 
-**Parameters**
+**Parameter**| **Description** |
+--------------|---------------
+**options** | `Object`, Optional request options.|
 
-**options**: `Object`, Optional request options.
 
 
+
+---------------------------
 
 ### org.listForUser(username, options) 
 
@@ -26,15 +29,15 @@ List user organizations
 
 [GitHub API](https://developer.github.com/v3/orgs/#list-user-organizations)
 
-**Parameters**
-
-**username**: `String`, List user organizations
-
-[GitHub API](https://developer.github.com/v3/orgs/#list-user-organizations)
-
-**options**: `Object`, Optional request options
+**Parameter**| **Description** |
+--------------|---------------
+**username** | `String`, username of the user|
+**options** | `Object`, Optional request options|
 
 
+
+
+---------------------------
 
 ### org.get(org, options) 
 
@@ -42,15 +45,15 @@ Get an organization
 
 [GitHub API](https://developer.github.com/v3/orgs/#get-an-organization)
 
-**Parameters**
-
-**org**: `String`, Get an organization
-
-[GitHub API](https://developer.github.com/v3/orgs/#get-an-organization)
-
-**options**: `Object`, Optional request options
+**Parameter**| **Description** |
+--------------|---------------
+**org** | `String`, org name|
+**options** | `Object`, Optional request options|
 
 
+
+
+---------------------------
 
 
 * * *
