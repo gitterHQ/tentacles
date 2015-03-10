@@ -4,7 +4,8 @@
   "description": "Gitter GitHub client",
   "main": "lib/client.js",
   "scripts": {
-    "test": "mocha --recursive test/ --timeout 10000"
+    "test": "mocha",
+    "doc": "rm -rf doc/ && jsdox --index summary --templateDir jsdox_templates/ --output doc/ lib/resources/"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "coveralls": "^2.11.2",
     "gulp": "^3.8.11",
     "gulp-spawn-mocha": "^2.0.1",
+    "jsdox": "^0.4.9",
     "mocha": "^2.1.0"
   }
 }
