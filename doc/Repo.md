@@ -61,6 +61,20 @@ Repository
 
 ---------------------------
 
+### repo.getById(id, options) 
+
+Undocumented function to return a repository by its ID. See http://stackoverflow.com/questions/28778568/how-to-find-the-new-location-of-a-repository-after-a-rename
+
+**Parameter**| **Description** |
+--------------|---------------
+**id** | `String`, id of the repo|
+**options** | `Object`, Optional request options|
+
+
+
+
+---------------------------
+
 ### repo.listContributors(full_name, options) 
 
 Repository
@@ -139,6 +153,20 @@ Repository
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
 **branch** | `String`, name of the branch|
+**options** | `Object`, Optional request options|
+
+
+
+
+---------------------------
+
+### repo.delete(full_name, options) 
+
+Repository
+
+**Parameter**| **Description** |
+--------------|---------------
+**full_name** | `String`, owner/repo name of repo|
 **options** | `Object`, Optional request options|
 
 

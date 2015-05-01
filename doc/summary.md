@@ -89,35 +89,16 @@ Delete a Reference
 
 
 
+###[delete](Repo.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
+
+
+
 ###[deleteFile](RepoContent.md):
 Delete a file
 This method deletes a file in a repository
 
 [GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;contents&#x2F;#delete-a-file) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoContent.js](../lib/resources/RepoContent.js))
-
-
-
-###[get](GitCommit.md):
-Get a Commit
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;commits&#x2F;#get-a-commit) (in [..&#x2F;lib&#x2F;resources&#x2F;GitCommit.js](../lib/resources/GitCommit.js))
-
-
-
-###[get](GitRef.md):
-Get a Reference
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#get-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
-
-
-
-###[get](User.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;User.js](../lib/resources/User.js))
-
-
-
-###[get](RepoCommit.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;RepoCommit.js](../lib/resources/RepoCommit.js))
 
 
 
@@ -133,15 +114,10 @@ Get an organization
 
 
 
-###[get](PullRequest.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequest.js](../lib/resources/PullRequest.js))
+###[get](GitCommit.md):
+Get a Commit
 
-
-
-###[get](Issue.md):
-Get a single issue
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;#get-a-single-issue) (in [..&#x2F;lib&#x2F;resources&#x2F;Issue.js](../lib/resources/Issue.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;commits&#x2F;#get-a-commit) (in [..&#x2F;lib&#x2F;resources&#x2F;GitCommit.js](../lib/resources/GitCommit.js))
 
 
 
@@ -152,6 +128,35 @@ Get a Tree
 
 
 
+###[get](GitRef.md):
+Get a Reference
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#get-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
+
+
+
+###[get](User.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;User.js](../lib/resources/User.js))
+
+
+
+###[get](PullRequest.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequest.js](../lib/resources/PullRequest.js))
+
+
+
+###[get](RepoCommit.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;RepoCommit.js](../lib/resources/RepoCommit.js))
+
+
+
+###[get](Issue.md):
+Get a single issue
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;#get-a-single-issue) (in [..&#x2F;lib&#x2F;resources&#x2F;Issue.js](../lib/resources/Issue.js))
+
+
+
 ###[getAuthUser](User.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;User.js](../lib/resources/User.js))
 
@@ -159,6 +164,11 @@ Get a Tree
 
 ###[getBranch](Repo.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
+
+
+
+###[getById](Repo.md):
+Undocumented function to return a repository by its ID. See http:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;28778568&#x2F;how-to-find-the-new-location-of-a-repository-after-a-rename (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
 
 
 
@@ -262,18 +272,13 @@ repositories, member repositories, and organization repositories.
 
 
 
+###[listForAuthUser](UserFollower.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
+
+
+
 ###[listForAuthUser](Starring.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
-
-
-
-###[listForAuthUser](Repo.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
-
-
-
-###[listForAuthUser](Watching.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
 
 
 
@@ -284,13 +289,18 @@ List your organizations
 
 
 
-###[listForAuthUser](UserFollower.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
+###[listForAuthUser](Watching.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
 
 
 
 ###[listForAuthUser](UserEmail.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;UserEmail.js](../lib/resources/UserEmail.js))
+
+
+
+###[listForAuthUser](Repo.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
 
 
 
@@ -306,8 +316,18 @@ List all issues for a given organization for the authenticated user
 
 
 
+###[listForRepo](Starring.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
+
+
+
 ###[listForRepo](Watching.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
+
+
+
+###[listForRepo](PullRequest.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequest.js](../lib/resources/PullRequest.js))
 
 
 
@@ -318,20 +338,20 @@ List issues for a repository
 
 
 
-###[listForRepo](PullRequest.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequest.js](../lib/resources/PullRequest.js))
-
-
-
-###[listForRepo](Starring.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
-
-
-
 ###[listForUser](Org.md):
 List user organizations
 
 [GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#list-user-organizations) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
+
+
+
+###[listForUser](UserFollower.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
+
+
+
+###[listForUser](Watching.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
 
 
 
@@ -342,16 +362,6 @@ List user organizations
 
 ###[listForUser](Starring.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
-
-
-
-###[listForUser](Watching.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
-
-
-
-###[listForUser](UserFollower.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
 
 
 
