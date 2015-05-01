@@ -80,6 +80,14 @@ describe('repo', function() {
         .nodeify(done);
     });
 
+    it('getById', function(done) {
+      ghClient.repo.getById('31073426')
+        .then(function(repo) {
+          assert.strictEqual('gitterHQ/tentacles', repo.full_name);
+        })
+        .nodeify(done);
+    });
+
     it('get non-existent', function(done) {
       ghClient.repo.get('gitterHQ/tentacles-asduioisd')
         .then(function(repo) {
