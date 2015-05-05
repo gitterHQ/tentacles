@@ -221,6 +221,10 @@ var tentacles = new Tentacles({
 });
 ```
 
+### Streaming pagenated results
+
+Prefer using streams for pagenated results? Take a look at [Tentacles Streams](https://github.com/gitterHQ/tentacles-streams), which has an identical API to Tentacles, but returns objectstreams of all the pages of results.
+
 ## Authors
 
 Lovingly build by [@suprememoocow](https://twitter.com/suprememoocow) and the team at [Gitter](https://gitter.im).
