@@ -44,4 +44,13 @@ describe('org', function() {
       .nodeify(done);
   });
 
+  it('should find an org by its ID', function(done) {
+    ghClient.user.getById(5990364)
+      .then(function(org) {
+        assert.strictEqual('gitterHQ', org.login);
+      })
+      .nodeify(done);
+  });
+
+
 });
