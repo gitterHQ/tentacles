@@ -55,6 +55,20 @@ Get an organization
 
 ---------------------------
 
+### org.getById(id, options) 
+
+Undocumented function to return an organization by its ID.
+
+**Parameter**| **Description** |
+--------------|---------------
+**id** | `String`, id of the organization|
+**options** | `Object`, Optional request options|
+
+
+
+
+---------------------------
+
 
 * * *
 
