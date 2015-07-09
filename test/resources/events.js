@@ -1,7 +1,7 @@
 var GHClient = require('../..');
 var assert = require('assert');
 
-describe('user', function() {
+describe('events', function() {
   var ghClient;
 
   before(function() {
