@@ -79,6 +79,7 @@ Methods which return an **array** will generally be prefixed with `list`.
 The following resources are supports
 
  * **Activity**
+   * [`tentacles.events`](doc/Events.md)
    * [`tentacles.starring`](doc/Starring.md)
    * [`tentacles.watching`](doc/Watching.md)
  * **Git Data**
