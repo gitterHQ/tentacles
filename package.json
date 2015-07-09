@@ -1,6 +1,6 @@
 {
   "name": "tentacles",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Gitter GitHub client",
   "main": "lib/client.js",
   "scripts": {
