@@ -65,7 +65,6 @@ describe('orgTeam', function() {
   it('listForAuthUser', function(done) {
     ghClient.orgTeam.listForAuthUser()
       .then(function(teams) {
-        console.log('TEAMS',teams)
         assert(Array.isArray(teams));
       })
       .nodeify(done);
