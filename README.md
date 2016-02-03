@@ -156,7 +156,7 @@ tentacles.user.get('suprememoocow')
 Sometimes it's useful to access the response headers. In order to do this, use the
 `spread` option. When `spread` is `true`, the promise will resolve an array of
 [`body`, `response`]. This can then be spread across the parameters of the promise
-callback using Q's `spread` method, like this:
+callback using `Promise.spread` method, like so:
 
 ```javascript
 var Tentacles = require('tentacles');
@@ -226,6 +226,16 @@ var tentacles = new Tentacles({
 ### Streaming pagenated results
 
 Prefer using streams for pagenated results? Take a look at [Tentacles Streams](https://github.com/gitterHQ/tentacles-streams), which has an identical API to Tentacles, but returns objectstreams of all the pages of results.
+
+## Changing the Promise Library
+
+Prior to version 0.3.0, Tentacles used `Q` Promises. Version 0.3.0 uses Bluebird
+by default, but this can be switched by setting the `Tentacles.Promise` library.
+
+```js
+var Tentacles = require('tentacles');
+Tentacles.Promise = require('q').Promise;
+```
 
 ## Authors
 
