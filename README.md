@@ -99,6 +99,7 @@ The following resources are supports
    * [`tentacles.repoCollaborator`](doc/RepoCollaborator.md)
    * [`tentacles.repoCommit`](doc/RepoCommit.md)
    * [`tentacles.repoContent`](doc/RepoContent.md)
+   * [`tentacles.repoWebhooks`](doc/RepoWebhooks.md)
  * **Search**
    * [`tentacles.search`](doc/Search.md)
  * **User**
