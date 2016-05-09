@@ -36,12 +36,8 @@ describe('user', function() {
       .nodeify(done);
   });
 
-  it('getSubscriptionForAuthUser', function(done) {
-    ghClient.watching.getSubscriptionForAuthUser('gitterHQ/gitter')
-      .then(function(subscription) {
-        console.log(subscription);
-      })
-      .nodeify(done);
+  it('getSubscriptionForAuthUser', function() {
+    return ghClient.watching.getSubscriptionForAuthUser('gitterHQ/gitter')
   });
 
   it('checkWatchForAuthUser', function(done) {
