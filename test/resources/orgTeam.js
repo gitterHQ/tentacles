@@ -39,9 +39,8 @@ describe('orgTeam', function() {
 
   it('getMembership fail', function(done) {
     ghClient.orgTeam.getMembership(1907449, 'tj')
-      .then(function() {
-        assert(false);
-      }, function() {
+      .then(function(result) {
+        assert(!result);
       })
       .nodeify(done);
   });
