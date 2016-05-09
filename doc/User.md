@@ -47,6 +47,21 @@ User
 
 ---------------------------
 
+### user.listAll(options) 
+
+Get all users
+
+[GitHub API](https://developer.github.com/v3/users/#get-all-users)
+
+**Parameter**| **Description** |
+--------------|---------------
+**options** | `Object`, Optional request options|
+
+
+
+
+---------------------------
+
 
 * * *
 

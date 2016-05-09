@@ -84,13 +84,6 @@ Check if a team manages a repository
 
 
 
-###[create](GitRef.md):
-Create a Reference
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#create-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
-
-
-
 ###[create](OrgTeam.md):
 Create team
 
@@ -100,10 +93,10 @@ In order to create a team, the authenticated user must be a member of :org.
 
 
 
-###[create](GitCommit.md):
-Create a Commit
+###[create](GitRef.md):
+Create a Reference
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;commits&#x2F;#create-a-commit) (in [..&#x2F;lib&#x2F;resources&#x2F;GitCommit.js](../lib/resources/GitCommit.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#create-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
 
 
 
@@ -121,6 +114,13 @@ Create a Tree
 
 
 
+###[create](GitCommit.md):
+Create a Commit
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;commits&#x2F;#create-a-commit) (in [..&#x2F;lib&#x2F;resources&#x2F;GitCommit.js](../lib/resources/GitCommit.js))
+
+
+
 ###[createFile](RepoContent.md):
 Create a file
 
@@ -130,8 +130,13 @@ This method creates a new file in a repository
 
 
 
-###[delete](Repo.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
+###[delete](OrgTeam.md):
+Delete team
+
+In order to delete a team, the authenticated user must be an owner of the
+org that the team is associated with, or a maintainer of the team.
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;teams&#x2F;#delete-team) (in [..&#x2F;lib&#x2F;resources&#x2F;OrgTeam.js](../lib/resources/OrgTeam.js))
 
 
 
@@ -149,13 +154,8 @@ Delete a Reference
 
 
 
-###[delete](OrgTeam.md):
-Delete team
-
-In order to delete a team, the authenticated user must be an owner of the
-org that the team is associated with, or a maintainer of the team.
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;teams&#x2F;#delete-team) (in [..&#x2F;lib&#x2F;resources&#x2F;OrgTeam.js](../lib/resources/OrgTeam.js))
+###[delete](Repo.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
 
 
 
@@ -167,11 +167,6 @@ This method deletes a file in a repository
 
 
 
-###[get](RepoCommit.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;RepoCommit.js](../lib/resources/RepoCommit.js))
-
-
-
 ###[get](GitCommit.md):
 Get a Commit
 
@@ -179,10 +174,17 @@ Get a Commit
 
 
 
-###[get](GitTree.md):
-Get a Tree
+###[get](Issue.md):
+Get a single issue
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;trees&#x2F;#get-a-tree) (in [..&#x2F;lib&#x2F;resources&#x2F;GitTree.js](../lib/resources/GitTree.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;#get-a-single-issue) (in [..&#x2F;lib&#x2F;resources&#x2F;Issue.js](../lib/resources/Issue.js))
+
+
+
+###[get](RepoWebhooks.md):
+Get single hook
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;hooks&#x2F;#get-single-hook) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoWebhooks.js](../lib/resources/RepoWebhooks.js))
 
 
 
@@ -193,10 +195,10 @@ Get team
 
 
 
-###[get](RepoWebhooks.md):
-Get single hook
+###[get](GitTree.md):
+Get a Tree
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;hooks&#x2F;#get-single-hook) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoWebhooks.js](../lib/resources/RepoWebhooks.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;trees&#x2F;#get-a-tree) (in [..&#x2F;lib&#x2F;resources&#x2F;GitTree.js](../lib/resources/GitTree.js))
 
 
 
@@ -212,10 +214,8 @@ Get a Reference
 
 
 
-###[get](Issue.md):
-Get a single issue
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;#get-a-single-issue) (in [..&#x2F;lib&#x2F;resources&#x2F;Issue.js](../lib/resources/Issue.js))
+###[get](RepoCommit.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;RepoCommit.js](../lib/resources/RepoCommit.js))
 
 
 
@@ -246,13 +246,13 @@ Get an organization
 
 
 
-###[getById](Repo.md):
-Undocumented function to return a repository by its ID. See http:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;28778568&#x2F;how-to-find-the-new-location-of-a-repository-after-a-rename (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
-
-
-
 ###[getById](User.md):
 Undocumented function to return a user by her ID. (in [..&#x2F;lib&#x2F;resources&#x2F;User.js](../lib/resources/User.js))
+
+
+
+###[getById](Repo.md):
+Undocumented function to return a repository by its ID. See http:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;28778568&#x2F;how-to-find-the-new-location-of-a-repository-after-a-rename (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
 
 
 
@@ -325,6 +325,13 @@ List hooks
 
 
 
+###[listAll](User.md):
+Get all users
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;users&#x2F;#get-all-users) (in [..&#x2F;lib&#x2F;resources&#x2F;User.js](../lib/resources/User.js))
+
+
+
 ###[listAll](GitRef.md):
 Get all References
 
@@ -382,25 +389,8 @@ List events performed by a user (in [..&#x2F;lib&#x2F;resources&#x2F;Events.js](
 
 
 
-###[listForAuthUser](Watching.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
-
-
-
 ###[listForAuthUser](Starring.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
-
-
-
-###[listForAuthUser](Org.md):
-List your organizations
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#list-your-organizations) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
-
-
-
-###[listForAuthUser](UserEmail.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;UserEmail.js](../lib/resources/UserEmail.js))
 
 
 
@@ -420,8 +410,30 @@ scope when authenticating via OAuth.
 
 
 
+###[listForAuthUser](Watching.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
+
+
+
 ###[listForAuthUser](UserFollower.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
+
+
+
+###[listForAuthUser](UserEmail.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;UserEmail.js](../lib/resources/UserEmail.js))
+
+
+
+###[listForAuthUser](Org.md):
+List your organizations
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#list-your-organizations) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
+
+
+
+###[listForOrg](Events.md):
+List public events for an organization (in [..&#x2F;lib&#x2F;resources&#x2F;Events.js](../lib/resources/Events.js))
 
 
 
@@ -429,11 +441,6 @@ scope when authenticating via OAuth.
 List teams
 
 [GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;teams&#x2F;#list-teams) (in [..&#x2F;lib&#x2F;resources&#x2F;OrgTeam.js](../lib/resources/OrgTeam.js))
-
-
-
-###[listForOrg](Events.md):
-List public events for an organization (in [..&#x2F;lib&#x2F;resources&#x2F;Events.js](../lib/resources/Events.js))
 
 
 
@@ -454,11 +461,6 @@ List all issues for a given organization for the authenticated user
 
 
 
-###[listForRepo](Starring.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
-
-
-
 ###[listForRepo](Watching.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
 
@@ -469,20 +471,15 @@ List repository events (in [..&#x2F;lib&#x2F;resources&#x2F;Events.js](../lib/re
 
 
 
+###[listForRepo](Starring.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
+
+
+
 ###[listForRepo](Issue.md):
 List issues for a repository
 
 [GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;#list-issues-for-a-repository) (in [..&#x2F;lib&#x2F;resources&#x2F;Issue.js](../lib/resources/Issue.js))
-
-
-
-###[listForUser](UserFollower.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
-
-
-
-###[listForUser](Starring.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
 
 
 
@@ -500,6 +497,16 @@ List issues for a repository
 List user organizations
 
 [GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#list-user-organizations) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
+
+
+
+###[listForUser](UserFollower.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
+
+
+
+###[listForUser](Starring.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
 
 
 
@@ -618,10 +625,13 @@ have admin access to the repository or be a maintainer of the team.
 
 
 
-###[update](GitRef.md):
-Update a Reference
+###[update](OrgTeam.md):
+Edit team
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#update-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
+In order to edit a team, the authenticated user must either be an owner of
+the org that the team is associated with, or a maintainer of the team.
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;teams&#x2F;#edit-team) (in [..&#x2F;lib&#x2F;resources&#x2F;OrgTeam.js](../lib/resources/OrgTeam.js))
 
 
 
@@ -632,13 +642,10 @@ Edit a hook
 
 
 
-###[update](OrgTeam.md):
-Edit team
+###[update](GitRef.md):
+Update a Reference
 
-In order to edit a team, the authenticated user must either be an owner of
-the org that the team is associated with, or a maintainer of the team.
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;teams&#x2F;#edit-team) (in [..&#x2F;lib&#x2F;resources&#x2F;OrgTeam.js](../lib/resources/OrgTeam.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#update-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
 
 
 

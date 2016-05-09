@@ -33,11 +33,19 @@ describe('user', function() {
       })
       .nodeify(done);
   });
-  
+
   it('should find a user by his ID', function(done) {
     ghClient.user.getById(594566)
       .then(function(user) {
         assert.strictEqual('suprememoocow', user.login);
+      })
+      .nodeify(done);
+  });
+
+  it('should list all users', function(done) {
+    ghClient.user.listAll()
+      .then(function(users) {
+        assert(Array.isArray(users));
       })
       .nodeify(done);
   });
