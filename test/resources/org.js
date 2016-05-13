@@ -52,5 +52,12 @@ describe('org', function() {
       .nodeify(done);
   });
 
+  it('should list all organisations', function(done) {
+    ghClient.org.listAll()
+      .then(function(orgs) {
+        assert(Array.isArray(orgs));
+      })
+      .nodeify(done);
+  });
 
 });
