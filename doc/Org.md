@@ -69,6 +69,21 @@ Undocumented function to return an organization by its ID.
 
 ---------------------------
 
+### org.listAll(options) 
+
+Get all organizations
+
+[GitHub API](https://developer.github.com/v3/orgs/#list-all-organizations)
+
+**Parameter**| **Description** |
+--------------|---------------
+**options** | `Object`, Optional request options|
+
+
+
+
+---------------------------
+
 
 * * *
 
