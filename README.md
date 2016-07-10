@@ -94,6 +94,7 @@ The following resources are supports
    * [`tentacles.orgTeam`](doc/OrgTeam.md)
  * **Pull Requests**
    * [`tentacles.pullRequest`](doc/PullRequest.md)
+   * [`tentacles.pullRequestComment`](doc/PullRequestComment.md)
  * **Repositories**
    * [`tentacles.repo`](doc/Repo.md)
    * [`tentacles.repoCollaborator`](doc/RepoCollaborator.md)
