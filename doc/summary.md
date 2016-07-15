@@ -27,6 +27,13 @@ organization.
 
 
 
+###[addToIssue](IssueLabel.md):
+Add labels to an issue
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;labels&#x2F;#add-labels-to-an-issue) (in [..&#x2F;lib&#x2F;resources&#x2F;IssueLabel.js](../lib/resources/IssueLabel.js))
+
+
+
 ###[checkAuthUserFollowing](UserFollower.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
 
@@ -84,13 +91,6 @@ Check if a team manages a repository
 
 
 
-###[create](GitTree.md):
-Create a Tree
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;trees&#x2F;#create-a-tree) (in [..&#x2F;lib&#x2F;resources&#x2F;GitTree.js](../lib/resources/GitTree.js))
-
-
-
 ###[create](RepoWebhooks.md):
 Create a hook
 
@@ -98,10 +98,10 @@ Create a hook
 
 
 
-###[create](GitRef.md):
-Create a Reference
+###[create](PullRequestComment.md):
+Create a comment
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#create-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;pulls&#x2F;comments&#x2F;#create-a-comment) (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequestComment.js](../lib/resources/PullRequestComment.js))
 
 
 
@@ -109,6 +109,13 @@ Create a Reference
 Create a Commit
 
 [GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;commits&#x2F;#create-a-commit) (in [..&#x2F;lib&#x2F;resources&#x2F;GitCommit.js](../lib/resources/GitCommit.js))
+
+
+
+###[create](GitRef.md):
+Create a Reference
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#create-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
 
 
 
@@ -121,10 +128,10 @@ In order to create a team, the authenticated user must be a member of :org.
 
 
 
-###[create](PullRequestComment.md):
-Create a comment
+###[create](GitTree.md):
+Create a Tree
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;pulls&#x2F;comments&#x2F;#create-a-comment) (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequestComment.js](../lib/resources/PullRequestComment.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;trees&#x2F;#create-a-tree) (in [..&#x2F;lib&#x2F;resources&#x2F;GitTree.js](../lib/resources/GitTree.js))
 
 
 
@@ -137,10 +144,15 @@ This method creates a new file in a repository
 
 
 
-###[delete](GitRef.md):
-Delete a Reference
+###[createLabel](IssueLabel.md):
+Create a label
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#delete-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;labels&#x2F;#create-a-label) (in [..&#x2F;lib&#x2F;resources&#x2F;IssueLabel.js](../lib/resources/IssueLabel.js))
+
+
+
+###[delete](Repo.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
 
 
 
@@ -161,15 +173,17 @@ Delete a comment
 
 
 
-###[delete](Repo.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
-
-
-
 ###[delete](RepoWebhooks.md):
 Delete a hook
 
 [GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;hooks&#x2F;#delete-a-hook) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoWebhooks.js](../lib/resources/RepoWebhooks.js))
+
+
+
+###[delete](GitRef.md):
+Delete a Reference
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#delete-a-reference) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
 
 
 
@@ -181,36 +195,17 @@ This method deletes a file in a repository
 
 
 
+###[deleteLabel](IssueLabel.md):
+Delete a label
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;labels&#x2F;#delete-a-label) (in [..&#x2F;lib&#x2F;resources&#x2F;IssueLabel.js](../lib/resources/IssueLabel.js))
+
+
+
 ###[edit](PullRequestComment.md):
 Edit a comment
 
 [GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;pulls&#x2F;comments&#x2F;#edit-a-comment) (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequestComment.js](../lib/resources/PullRequestComment.js))
-
-
-
-###[get](GitCommit.md):
-Get a Commit
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;commits&#x2F;#get-a-commit) (in [..&#x2F;lib&#x2F;resources&#x2F;GitCommit.js](../lib/resources/GitCommit.js))
-
-
-
-###[get](PullRequest.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequest.js](../lib/resources/PullRequest.js))
-
-
-
-###[get](Issue.md):
-Get a single issue
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;#get-a-single-issue) (in [..&#x2F;lib&#x2F;resources&#x2F;Issue.js](../lib/resources/Issue.js))
-
-
-
-###[get](RepoWebhooks.md):
-Get single hook
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;hooks&#x2F;#get-single-hook) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoWebhooks.js](../lib/resources/RepoWebhooks.js))
 
 
 
@@ -226,6 +221,13 @@ Get a Tree
 
 
 
+###[get](Org.md):
+Get an organization
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#get-an-organization) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
+
+
+
 ###[get](GitRef.md):
 Get a Reference
 
@@ -233,15 +235,22 @@ Get a Reference
 
 
 
-###[get](RepoCommit.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;RepoCommit.js](../lib/resources/RepoCommit.js))
+###[get](PullRequest.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequest.js](../lib/resources/PullRequest.js))
 
 
 
-###[get](Org.md):
-Get an organization
+###[get](OrgTeam.md):
+Get team
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#get-an-organization) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;teams&#x2F;#get-team) (in [..&#x2F;lib&#x2F;resources&#x2F;OrgTeam.js](../lib/resources/OrgTeam.js))
+
+
+
+###[get](GitCommit.md):
+Get a Commit
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;commits&#x2F;#get-a-commit) (in [..&#x2F;lib&#x2F;resources&#x2F;GitCommit.js](../lib/resources/GitCommit.js))
 
 
 
@@ -250,10 +259,22 @@ Get an organization
 
 
 
-###[get](OrgTeam.md):
-Get team
+###[get](Issue.md):
+Get a single issue
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;teams&#x2F;#get-team) (in [..&#x2F;lib&#x2F;resources&#x2F;OrgTeam.js](../lib/resources/OrgTeam.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;#get-a-single-issue) (in [..&#x2F;lib&#x2F;resources&#x2F;Issue.js](../lib/resources/Issue.js))
+
+
+
+###[get](RepoCommit.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;RepoCommit.js](../lib/resources/RepoCommit.js))
+
+
+
+###[get](RepoWebhooks.md):
+Get single hook
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;hooks&#x2F;#get-single-hook) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoWebhooks.js](../lib/resources/RepoWebhooks.js))
 
 
 
@@ -267,11 +288,6 @@ Get team
 
 
 
-###[getById](Repo.md):
-Undocumented function to return a repository by its ID. See http:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;28778568&#x2F;how-to-find-the-new-location-of-a-repository-after-a-rename (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
-
-
-
 ###[getById](PullRequestComment.md):
 Get a single comment
 
@@ -279,13 +295,18 @@ Get a single comment
 
 
 
-###[getById](Org.md):
-Undocumented function to return an organization by its ID. (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
+###[getById](Repo.md):
+Undocumented function to return a repository by its ID. See http:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;28778568&#x2F;how-to-find-the-new-location-of-a-repository-after-a-rename (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
 
 
 
 ###[getById](User.md):
 Undocumented function to return a user by her ID. (in [..&#x2F;lib&#x2F;resources&#x2F;User.js](../lib/resources/User.js))
+
+
+
+###[getById](Org.md):
+Undocumented function to return an organization by its ID. (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
 
 
 
@@ -295,6 +316,13 @@ Get contents
 This method returns the contents of a file or directory in a repository.
 
 [GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;contents&#x2F;#get-contents) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoContent.js](../lib/resources/RepoContent.js))
+
+
+
+###[getLabel](IssueLabel.md):
+Get a single label
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;labels&#x2F;#get-a-single-label) (in [..&#x2F;lib&#x2F;resources&#x2F;IssueLabel.js](../lib/resources/IssueLabel.js))
 
 
 
@@ -336,13 +364,6 @@ This method returns the preferred README for a repository.
 
 
 
-###[list](RepoWebhooks.md):
-List hooks
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;hooks&#x2F;#list-hooks) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoWebhooks.js](../lib/resources/RepoWebhooks.js))
-
-
-
 ###[list](RepoCollaborator.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;RepoCollaborator.js](../lib/resources/RepoCollaborator.js))
 
@@ -353,10 +374,17 @@ List hooks
 
 
 
-###[listAll](GitRef.md):
-Get all References
+###[list](RepoWebhooks.md):
+List hooks
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#get-all-references) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;hooks&#x2F;#list-hooks) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoWebhooks.js](../lib/resources/RepoWebhooks.js))
+
+
+
+###[listAll](Org.md):
+Get all organizations
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#list-all-organizations) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
 
 
 
@@ -364,6 +392,13 @@ Get all References
 Get all users
 
 [GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;users&#x2F;#get-all-users) (in [..&#x2F;lib&#x2F;resources&#x2F;User.js](../lib/resources/User.js))
+
+
+
+###[listAll](GitRef.md):
+Get all References
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;git&#x2F;refs&#x2F;#get-all-references) (in [..&#x2F;lib&#x2F;resources&#x2F;GitRef.js](../lib/resources/GitRef.js))
 
 
 
@@ -417,6 +452,38 @@ List events performed by a user (in [..&#x2F;lib&#x2F;resources&#x2F;Events.js](
 
 
 
+###[listForAuthUser](UserFollower.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
+
+
+
+###[listForAuthUser](UserEmail.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;UserEmail.js](../lib/resources/UserEmail.js))
+
+
+
+###[listForAuthUser](Repo.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
+
+
+
+###[listForAuthUser](Starring.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
+
+
+
+###[listForAuthUser](Watching.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
+
+
+
+###[listForAuthUser](Org.md):
+List your organizations
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#list-your-organizations) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
+
+
+
 ###[listForAuthUser](OrgTeam.md):
 List user teams
 
@@ -428,35 +495,22 @@ scope when authenticating via OAuth.
 
 
 
-###[listForAuthUser](UserEmail.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;UserEmail.js](../lib/resources/UserEmail.js))
+###[listForIssue](IssueLabel.md):
+List labels on an issue
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;labels&#x2F;#list-labels-on-an-issue) (in [..&#x2F;lib&#x2F;resources&#x2F;IssueLabel.js](../lib/resources/IssueLabel.js))
 
 
 
-###[listForAuthUser](Org.md):
-List your organizations
+###[listForMilestone](IssueLabel.md):
+Get labels for every issue in a milestone
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#list-your-organizations) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
-
-
-
-###[listForAuthUser](Watching.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;labels&#x2F;#get-labels-for-every-issue-in-a-milestone) (in [..&#x2F;lib&#x2F;resources&#x2F;IssueLabel.js](../lib/resources/IssueLabel.js))
 
 
 
-###[listForAuthUser](Starring.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
-
-
-
-###[listForAuthUser](Repo.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
-
-
-
-###[listForAuthUser](UserFollower.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;UserFollower.js](../lib/resources/UserFollower.js))
+###[listForOrg](Events.md):
+List public events for an organization (in [..&#x2F;lib&#x2F;resources&#x2F;Events.js](../lib/resources/Events.js))
 
 
 
@@ -469,11 +523,6 @@ List your organizations
 List teams
 
 [GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;teams&#x2F;#list-teams) (in [..&#x2F;lib&#x2F;resources&#x2F;OrgTeam.js](../lib/resources/OrgTeam.js))
-
-
-
-###[listForOrg](Events.md):
-List public events for an organization (in [..&#x2F;lib&#x2F;resources&#x2F;Events.js](../lib/resources/Events.js))
 
 
 
@@ -491,10 +540,18 @@ List comments on a pull request
 
 
 
-###[listForRepo](Issue.md):
-List issues for a repository
+###[listForRepo](Starring.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;#list-issues-for-a-repository) (in [..&#x2F;lib&#x2F;resources&#x2F;Issue.js](../lib/resources/Issue.js))
+
+
+###[listForRepo](Events.md):
+List repository events (in [..&#x2F;lib&#x2F;resources&#x2F;Events.js](../lib/resources/Events.js))
+
+
+
+###[listForRepo](Watching.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
 
 
 
@@ -505,35 +562,22 @@ List comments in a repository
 
 
 
-###[listForRepo](Starring.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Starring.js](../lib/resources/Starring.js))
-
-
-
-###[listForRepo](Watching.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Watching.js](../lib/resources/Watching.js))
-
-
-
 ###[listForRepo](PullRequest.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;PullRequest.js](../lib/resources/PullRequest.js))
 
 
 
-###[listForRepo](Events.md):
-List repository events (in [..&#x2F;lib&#x2F;resources&#x2F;Events.js](../lib/resources/Events.js))
+###[listForRepo](IssueLabel.md):
+List all labels for this repository
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;labels&#x2F;#list-all-labels-for-this-repository) (in [..&#x2F;lib&#x2F;resources&#x2F;IssueLabel.js](../lib/resources/IssueLabel.js))
 
 
 
-###[listForUser](Org.md):
-List user organizations
+###[listForRepo](Issue.md):
+List issues for a repository
 
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#list-user-organizations) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
-
-
-
-###[listForUser](Repo.md):
- (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;#list-issues-for-a-repository) (in [..&#x2F;lib&#x2F;resources&#x2F;Issue.js](../lib/resources/Issue.js))
 
 
 
@@ -552,6 +596,18 @@ List user organizations
 
 
 
+###[listForUser](Org.md):
+List user organizations
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;#list-user-organizations) (in [..&#x2F;lib&#x2F;resources&#x2F;Org.js](../lib/resources/Org.js))
+
+
+
+###[listForUser](Repo.md):
+ (in [..&#x2F;lib&#x2F;resources&#x2F;Repo.js](../lib/resources/Repo.js))
+
+
+
 ###[listForUserInOrg](Events.md):
 List events for an organization (in [..&#x2F;lib&#x2F;resources&#x2F;Events.js](../lib/resources/Events.js))
 
@@ -567,11 +623,6 @@ List issue events for a repository (in [..&#x2F;lib&#x2F;resources&#x2F;Events.j
 
 
 
-###[listMembers](OrgMember.md):
-Members list (in [..&#x2F;lib&#x2F;resources&#x2F;OrgMember.js](../lib/resources/OrgMember.js))
-
-
-
 ###[listMembers](OrgTeam.md):
 List team members
 
@@ -579,6 +630,11 @@ In order to list members in a team, the team must be visible to the
 authenticated user.
 
 [GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;teams&#x2F;#list-team-members) (in [..&#x2F;lib&#x2F;resources&#x2F;OrgTeam.js](../lib/resources/OrgTeam.js))
+
+
+
+###[listMembers](OrgMember.md):
+Members list (in [..&#x2F;lib&#x2F;resources&#x2F;OrgMember.js](../lib/resources/OrgMember.js))
 
 
 
@@ -641,6 +697,20 @@ Ping a hook
 
 
 
+###[removeAllFromIssue](IssueLabel.md):
+Remove all labels from an issue
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;labels&#x2F;#remove-all-labels-from-an-issue) (in [..&#x2F;lib&#x2F;resources&#x2F;IssueLabel.js](../lib/resources/IssueLabel.js))
+
+
+
+###[removeFromIssue](IssueLabel.md):
+Remove a label from an issue
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;labels&#x2F;#remove-a-label-from-an-issue) (in [..&#x2F;lib&#x2F;resources&#x2F;IssueLabel.js](../lib/resources/IssueLabel.js))
+
+
+
 ###[removeMembership](OrgTeam.md):
 Remove team membership
 
@@ -662,8 +732,25 @@ have admin access to the repository or be a maintainer of the team.
 
 
 
+###[replaceAllForIssue](IssueLabel.md):
+Replace all labels for an issue
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;labels&#x2F;#replace-all-labels-for-an-issue) (in [..&#x2F;lib&#x2F;resources&#x2F;IssueLabel.js](../lib/resources/IssueLabel.js))
+
+
+
 ###[repos](Search.md):
  (in [..&#x2F;lib&#x2F;resources&#x2F;Search.js](../lib/resources/Search.js))
+
+
+
+###[update](OrgTeam.md):
+Edit team
+
+In order to edit a team, the authenticated user must either be an owner of
+the org that the team is associated with, or a maintainer of the team.
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;teams&#x2F;#edit-team) (in [..&#x2F;lib&#x2F;resources&#x2F;OrgTeam.js](../lib/resources/OrgTeam.js))
 
 
 
@@ -681,22 +768,19 @@ Update a Reference
 
 
 
-###[update](OrgTeam.md):
-Edit team
-
-In order to edit a team, the authenticated user must either be an owner of
-the org that the team is associated with, or a maintainer of the team.
-
-[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;orgs&#x2F;teams&#x2F;#edit-team) (in [..&#x2F;lib&#x2F;resources&#x2F;OrgTeam.js](../lib/resources/OrgTeam.js))
-
-
-
 ###[updateFile](RepoContent.md):
 Update a file
 
 This method updates a file in a repository
 
 [GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;repos&#x2F;contents&#x2F;#update-a-file) (in [..&#x2F;lib&#x2F;resources&#x2F;RepoContent.js](../lib/resources/RepoContent.js))
+
+
+
+###[updateLabel](IssueLabel.md):
+Update a label
+
+[GitHub API](https:&#x2F;&#x2F;developer.github.com&#x2F;v3&#x2F;issues&#x2F;labels&#x2F;#update-a-label) (in [..&#x2F;lib&#x2F;resources&#x2F;IssueLabel.js](../lib/resources/IssueLabel.js))
 
 
 

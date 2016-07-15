@@ -88,6 +88,7 @@ The following resources are supports
    * [`tentacles.gitTree`](doc/GitTree.md)
  * **Issues**  
    * [`tentacles.issue`](doc/Issue.md)
+   * [`tentacles.issueLabel`](doc/IssueLabel.md)
  * **Organisations**  
    * [`tentacles.org`](doc/Org.md)
    * [`tentacles.orgMember`](doc/OrgMember.md)
