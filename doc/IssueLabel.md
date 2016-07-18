@@ -39,7 +39,7 @@ Get a single label
 
 ---------------------------
 
-### issueLabel.createLabel(full_name, options) 
+### issueLabel.createLabel(full_name, body, options) 
 
 Create a label
 
@@ -48,6 +48,7 @@ Create a label
 **Parameter**| **Description** |
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
+**body** | `Object`, body of label|
 **options** | `Object`, Optional request options|
 
 
@@ -55,7 +56,7 @@ Create a label
 
 ---------------------------
 
-### issueLabel.updateLabel(full_name, name, options) 
+### issueLabel.updateLabel(full_name, name, body, options) 
 
 Update a label
 
@@ -65,6 +66,7 @@ Update a label
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
 **name** | `String`, name of the label|
+**body** | `Object`, body of label|
 **options** | `Object`, Optional request options|
 
 
@@ -106,7 +108,7 @@ List labels on an issue
 
 ---------------------------
 
-### issueLabel.addToIssue(full_name, number, options) 
+### issueLabel.addToIssue(full_name, number, body, options) 
 
 Add labels to an issue
 
@@ -116,6 +118,7 @@ Add labels to an issue
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
 **number** | `Number`, number of the issue|
+**body** | `Object`, body of label|
 **options** | `Object`, Optional request options|
 
 
@@ -141,7 +144,7 @@ Remove a label from an issue
 
 ---------------------------
 
-### issueLabel.replaceAllForIssue(full_name, number, options) 
+### issueLabel.replaceAllForIssue(full_name, number, body, options) 
 
 Replace all labels for an issue
 
@@ -151,6 +154,7 @@ Replace all labels for an issue
 --------------|---------------
 **full_name** | `String`, owner/repo name of repo|
 **number** | `Number`, number of the issue|
+**body** | `Object`, body of label|
 **options** | `Object`, Optional request options|
 
 
