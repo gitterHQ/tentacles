@@ -20,7 +20,7 @@ describe('repoWebhooks', function() {
       });
   });
 
-  it('create', function() {
+  it.skip('create', function() {
     return ghClient.repoWebhooks.create(repoWithAdmin, {
       name: 'web',
       config: {
@@ -49,7 +49,7 @@ describe('repoWebhooks', function() {
   });
 
 
-  it('update', function() {
+  it.skip('update', function() {
     return ghClient.repoWebhooks.list(repoWithAdmin)
       .then(function(hooks) {
         var id = hooks[0].id;
@@ -67,7 +67,7 @@ describe('repoWebhooks', function() {
       });
   });
 
-  it('delete', function() {
+  it.skip('delete', function() {
     return ghClient.repoWebhooks.list(repoWithAdmin)
       .then(function(hooks) {
         return Promise.map(hooks, function(hook) {
