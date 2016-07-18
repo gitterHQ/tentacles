@@ -17,7 +17,6 @@ describe('pullRequestComment', function() {
       .then(function(prComments) {
         assert(Array.isArray(prComments));
         assert(prComments.length > 0);
-        console.log(prComments[0])
       });
   });
 
