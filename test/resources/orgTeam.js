@@ -1,3 +1,5 @@
+'use strict';
+
 var GHClient = require('../..');
 var assert = require('assert');
 

@@ -1,3 +1,5 @@
+'use strict';
+
 var GHClient = require('..');
 var assert = require('assert');
 
@@ -19,7 +21,7 @@ describe('options-passthrough', function() {
       count++;
 
       setImmediate(function() {
-        callback(null, { statusCode: 200, headers: { 'content-type': 'application/json' }  }, JSON.stringify(sentBody) );
+        callback(null, { statusCode: 200, headers: { 'content-type': 'application/json' } }, JSON.stringify(sentBody));
       });
     };
 
@@ -48,7 +50,7 @@ describe('options-passthrough', function() {
       count++;
 
       setImmediate(function() {
-        callback(null, { statusCode: 200, headers: { 'content-type': 'application/json' }  }, JSON.stringify(sentBody) );
+        callback(null, { statusCode: 200, headers: { 'content-type': 'application/json' } }, JSON.stringify(sentBody));
       });
     };
 

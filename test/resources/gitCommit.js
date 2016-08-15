@@ -1,3 +1,5 @@
+'use strict';
+
 var GHClient = require('../..');
 var assert = require('assert');
 
@@ -23,6 +25,7 @@ describe('gitCommit', function() {
 
   describe('mocked', function() {
     var mockRequest, requestCalls, requestOptions;
+    var ghClient;
 
     beforeEach(function() {
       requestCalls = 0;

@@ -1,8 +1,10 @@
+'use strict';
+
 var GHClient = require('../..');
 var assert = require('assert');
 
 describe('issue', function() {
-  var ghClient, orgName;
+  var ghClient;
 
   before(function() {
     assert(process.env.GITHUB_ACCESS_TOKEN, 'Please set GITHUB_ACCESS_TOKEN');

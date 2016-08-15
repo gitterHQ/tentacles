@@ -1,10 +1,12 @@
+'use strict';
+
 var GHClient = require('../..');
 var assert = require('assert');
 
 describe('gitRef', function() {
-  describe('non mocked', function() {
+  var ghClient;
 
-    var ghClient;
+  describe('non mocked', function() {
 
     before(function() {
       assert(process.env.GITHUB_ACCESS_TOKEN, 'Please set GITHUB_ACCESS_TOKEN');

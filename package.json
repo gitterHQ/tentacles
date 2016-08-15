@@ -31,6 +31,9 @@
   },
   "devDependencies": {
     "coveralls": "^2.11.2",
+    "eslint": "^3.3.0",
+    "eslint-plugin-mocha": "^4.3.0",
+    "eslint-plugin-node": "^2.0.0",
     "gulp": "^3.8.11",
     "gulp-spawn-mocha": "^2.0.1",
     "jsdox": "^0.4.9",
