@@ -1,4 +1,4 @@
-# issueLabel
+# issueComment
 
 [Issues Comments](https://developer.github.com/v3/issues/comments/)
 
@@ -6,7 +6,7 @@
 
 * * *
 
-### issueLabel.listForIssue(full_name, number, options) 
+### issueComment.listForIssue(full_name, number, options) 
 
 List comments on an issue
 [GitHub API](https://developer.github.com/v3/issues/comments/#list-comments-on-an-issue)
@@ -22,7 +22,7 @@ List comments on an issue
 
 ---------------------------
 
-### issueLabel.listForRepo(full_name, options) 
+### issueComment.listForRepo(full_name, options) 
 
 List comments in a repository
 [GitHub API](https://developer.github.com/v3/issues/comments/#list-comments-in-a-repository)
@@ -37,7 +37,7 @@ List comments in a repository
 
 ---------------------------
 
-### issueLabel.getComment(full_name, id, options) 
+### issueComment.getComment(full_name, id, options) 
 
 Get a single comment
 [GitHub API](https://developer.github.com/v3/issues/comments/#get-a-single-comment)
@@ -53,7 +53,7 @@ Get a single comment
 
 ---------------------------
 
-### issueLabel.createComment(full_name, number, body, options) 
+### issueComment.createComment(full_name, number, body, options) 
 
 Create a comment
 [GitHub API](https://developer.github.com/v3/issues/comments/#create-a-comment)
@@ -70,7 +70,7 @@ Create a comment
 
 ---------------------------
 
-### issueLabel.updateComment(full_name, id, body, options) 
+### issueComment.updateComment(full_name, id, body, options) 
 
 Edit a comment
 [GitHub API](https://developer.github.com/v3/issues/comments/#edit-a-comment)
@@ -87,7 +87,7 @@ Edit a comment
 
 ---------------------------
 
-### issueLabel.remove(full_name, id, options) 
+### issueComment.remove(full_name, id, options) 
 
 Delete a comment
 [GitHub API](https://developer.github.com/v3/issues/comments/#delete-a-comment)
